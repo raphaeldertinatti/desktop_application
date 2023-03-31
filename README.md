@@ -9,7 +9,7 @@ Development of a desktop application using C# (CSharp) and Windows Forms.
 ## Objective
 This repository will contain multiple scripts in C#/Winforms that are usefull for develop desktop applications in general. The application is not for a specific kind of company or operation, but is about a set of scripts to serve different purposes such as a login system, registrations, CRUD, data import, among others.
 
-## 1.Login Screen
+## 1. Login Screen
 <div style="text-align:center;">
 <img src="https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Login_Screen.png" alt="Image">
 </div>
@@ -100,3 +100,10 @@ MySqlDataReader reader = cmd.ExecuteReader();
 <div style="text-align:center;">
 <img src="https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/new_pass.png" alt="Image">
 </div>
+
+This is a "first-time-log-in-form", a method inside the click button event changes the *default* password for a new one of user preference, checking if the password is not null and if the new password textbox and confirmation password textbox are different.
+
+[code: Frm_NewPass.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_NewPass.cs)
+
+
+
