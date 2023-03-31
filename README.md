@@ -33,7 +33,7 @@ static void Main()
             } 
 ```
 
-[open: program.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Program.cs)
+[code: program.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Program.cs)
 > ## cls_mysql_conn.cs
 
 To verify the user and pass we must connect to the database, i'm using MySQL database, so i have created a class called `cls_mysql_conn` that will contain the methods for connect and send commands to MySQL database.
@@ -65,6 +65,6 @@ The constructor of the class contains all the needed information for the connect
         }
 ```
 
-[open: cls_mysql_conn.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Classes/cls_mysql_conn.cs)
+[code: cls_mysql_conn.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Classes/cls_mysql_conn.cs)
 
 > ## LoginScreen.cs
