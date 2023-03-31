@@ -68,3 +68,30 @@ The constructor of the class contains all the needed information for the connect
 [code: cls_mysql_conn.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Classes/cls_mysql_conn.cs)
 
 > ## LoginScreen.cs
+Here in the login screen i have a method inside the click button event, the method `btn_enter_Click` will connect to the database using the methods of the `cls_mysql_conn` class to verify that the **user** and **password** entered in the textbox really exists in the database (previously registered). 
+
+if it is a new user, he will have a password called *default*, if the user found in the database has this *default* password, the user will be redirected to a new password registration form, if it is not the default pass, the *LoginSucess* variable will be set true, and the user will be redirected to the main form, as you can see in the code below:
+
+```
+MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows == true)
+                {
+                    if (txt_pass.Text == "default")
+                    {
+                        Frm_NewPass newpass = new Frm_NewPass();
+                        newpass.Show();
+                    }
+                    if (txt_pass.Text != "default")
+                    {
+                        LoginSucess = true;
+                        this.Close();
+                    }
+                }
+                else
+                {                       
+                    MessageBox.Show("User/Pass incorrect, verify your credentials", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                connection.CloseConnection();
+```
+
+[code: LoginScreen.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/LoginScreen.cs)
