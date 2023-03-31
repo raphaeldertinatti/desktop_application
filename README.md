@@ -97,4 +97,6 @@ MySqlDataReader reader = cmd.ExecuteReader();
 [code: LoginScreen.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/LoginScreen.cs)
 
 > ## Frm_NewPass.cs
-
+<div style="text-align:center;">
+<img src="https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/new_pass.png" alt="Image">
+</div>
