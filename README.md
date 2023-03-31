@@ -14,7 +14,7 @@ This repository will contain multiple scripts in C#/Winforms that are usefull fo
 <img src="https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Login_Screen.png" alt="Image">
 </div>
 
-> ### program.cs
+> ## program.cs
 
 First, in `program.cs` the application starts by running the `LoginScreen` Form, and **IF** the variable *LoginSucess* become **"true"** the application runs the Main Form MDI `(Frm_Main)`.
 
