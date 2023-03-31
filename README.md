@@ -101,7 +101,7 @@ MySqlDataReader reader = cmd.ExecuteReader();
 <img src="https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/new_pass.png" alt="Image">
 </div>
 
-This is a "first-time-log-in-form", a method inside the click button event changes the *default* password for a new one of user preference, checking if the password is not null and if the new password textbox and confirmation password textbox are different.
+This is a "first-time-log-in-form", a method inside the click button event changes the *default* password for a new one of user preference, checking if the password is null and if the new password textbox and confirmation  textbox are the same.
 
 [code: Frm_NewPass.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_NewPass.cs)
 
