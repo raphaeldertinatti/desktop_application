@@ -30,3 +30,33 @@ static void Main()
                 Application.Run(new Frm_Main());
             } 
 ```
+
+To verify the user and pass we must connect to the database, i'm using MySQL database, so i have created a class called `cls_mysql_conn` that will contain the methods for connect and send commands to MySQL database.
+The methods are:
+- public bool OpenConnection()
+- public bool CloseConnection()
+- public MySqlCommand CreateCommand(string query, params MySqlParameter[] parameters)
+- private bool IsConnectionOpen() - *check if the connection is already open*
+
+The constructor of the class contains all the needed information for the connection:
+
+```
+  public class cls_mysql_conn
+    {
+        private MySqlConnection conn;
+        private string server;        
+        private string user;
+        private string pass;
+
+        public cls_mysql_conn()
+        {
+            server = "00.0.000.000";
+            user = "system_user";
+            pass = "@aeiou0011*ABC";
+
+            string connectionString = $"datasource={server};username={user};password={pass};";
+
+            conn = new MySqlConnection(connectionString);
+        }
+```
+
