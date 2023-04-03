@@ -109,7 +109,8 @@ This is a "first-time-log-in-form", a method inside the click button event chang
 
 The main form MDI contains a toolstrip menu, being the parent form that contains multiple child forms within, the child forms that currently exists are:
 
-- Frm_Customers. 
+- Frm_Customers.
+    - Frm_CustomersList.
 - Frm_Companies.
 - Frm_Contacts.
 - Frm_Departments.
