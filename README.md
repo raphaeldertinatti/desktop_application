@@ -131,6 +131,6 @@ Just call the method that receives as parameters the List View, the SQL command,
  ```
 For more details access the full code.
 
-[code: cls_populate_views](https://github.com/raphaeldertinatti/desktop_application/blob/main/Classes/cls_populate_views.cs)
+[code: cls_populate_views.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Classes/cls_populate_views.cs)
 
 
