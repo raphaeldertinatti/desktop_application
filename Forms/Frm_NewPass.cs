@@ -13,6 +13,7 @@ namespace DesktopApplication
 {
     public partial class Frm_NewPass : Form
     {
+        cls_mysql_conn connection = new cls_mysql_conn();
         public Frm_NewPass()
         {
             InitializeComponent();
@@ -34,7 +35,6 @@ namespace DesktopApplication
                     {
                         try 
                         {
-                            cls_mysql_conn connection = new cls_mysql_conn();
                             connection.OpenConnection();   
                             string sql = "UPDATE " +
                                          "db_sis.tb_users " +
@@ -57,6 +57,10 @@ namespace DesktopApplication
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            connection.CloseConnection();
                         }
                     }                   
                 }                
