@@ -82,7 +82,7 @@ namespace DesktopApplication
             }            
         }
 
-        private bool IsConnectionOpen()
+        public bool IsConnectionOpen()
         {
             return conn != null && conn.State == System.Data.ConnectionState.Open;
         }
