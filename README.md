@@ -123,7 +123,13 @@ The main form MDI contains a toolstrip menu, being the parent form that contains
 
 ## 3. Class: cls_populate_views
 
+Before we move on to the Forms, I think it's important to talk about the  `cls_populate_views` class, it's a class that was created to populate the ListViews of the various forms with information taken from the database. This is a way to optimize the code by centralizing the operation of the **DataReaders** in a single method, avoiding code repetition.
 
-
+Just call the method that receives as parameters the List View, the SQL command, and the indexes of the columns that will be populated.
+```
+ public void PopulateListViews(ListView listview, MySqlCommand cmd, int[] columnIndexes)
+ ```
+For more details access the full code.
+[code: cls_populate_views]()
 
 
