@@ -121,7 +121,9 @@ The main form MDI contains a toolstrip menu, being the parent form that contains
 
 [code: Frm_Main.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Main.cs)
 
-## 3. Frm_Customers
+## 3. Class: cls_populate_views
+
+
 
 
 
