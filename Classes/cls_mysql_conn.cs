@@ -10,7 +10,7 @@ namespace DesktopApplication
 {
     public class cls_mysql_conn
     {
-        private MySqlConnection conn;
+        public MySqlConnection conn;
         private string server;        
         private string user;
         private string pass;
