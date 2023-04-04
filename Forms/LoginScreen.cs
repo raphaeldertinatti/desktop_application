@@ -13,6 +13,7 @@ namespace DesktopApplication
 {
     public partial class LoginScreen : Form
     {
+        cls_mysql_conn connection = new cls_mysql_conn();
         public bool LoginSucess = false;  
         public static string User { get; set; }
 
@@ -24,8 +25,7 @@ namespace DesktopApplication
         private void btn_enter_Click(object sender, EventArgs e)
         {
             try
-            {                          
-                cls_mysql_conn connection = new cls_mysql_conn();                
+            {                  
                 connection.OpenConnection();
                 string sql = "SELECT * FROM db_sis.tb_users WHERE "+
                              "USER = @user "+
@@ -44,6 +44,7 @@ namespace DesktopApplication
                 {
                     if (txt_pass.Text == "default")
                     {
+                        User = txt_user.Text;
                         Frm_NewPass newpass = new Frm_NewPass();
                         newpass.Show();
                     }
@@ -57,12 +58,19 @@ namespace DesktopApplication
                 {                       
                     MessageBox.Show("User/Pass incorrect, verify your credentials", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                connection.CloseConnection();
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }            
+            } 
+             finally
+            {
+                if (connection != null)
+                {
+                    connection.CloseConnection();
+                }
+            }           
         }
         private void btn_exit_Click(object sender, EventArgs e)
         {
