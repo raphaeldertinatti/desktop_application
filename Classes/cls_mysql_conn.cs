@@ -52,6 +52,10 @@ namespace DesktopApplication
                 MessageBox.Show(ex.Message);
                 return false;
             }
+            finally
+            {
+                conn.Dispose();
+            }
         }
 
         public MySqlCommand CreateCommand(string query, params MySqlParameter[] parameters)
