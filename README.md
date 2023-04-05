@@ -163,4 +163,6 @@ The main method of this form is `public void Capture()`. This method will be cal
 
 These methods will populate the three ListViews that exists in this Form.
 
+[code: Frm_Customers.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Customers.cs)
+
 ## 4.1 Frm_CustomersList
