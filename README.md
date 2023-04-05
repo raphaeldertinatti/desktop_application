@@ -160,3 +160,7 @@ The main method of this form is `public void Capture()`. This method will be cal
 - ListContacts();
 - ListCompanies();
 - ListServices();
+
+These methods will populate the three ListViews that exists in this Form.
+
+## 4.1 Frm_CustomersList
