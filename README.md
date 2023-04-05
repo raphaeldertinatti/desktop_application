@@ -147,9 +147,16 @@ This is the Customers form, which has three ListViews:
 > ### Buttons
 In this form, there are four buttons, which are:
 
-- **tsb_search_Click:** This is the button to search for customers in the registry. When clicked, it will open the Frm_CustomersList form, returning a list of registered customers. I will talk about this form in the next topic.
+- **tsb_search_Click:** This is the button to search for customers in the registry. When clicked, it will open the `Frm_CustomersList` form, returning a list of registered customers. I will talk about this form in the next topic.
 - **tsb_add_Click:** This button adds the customer to the database based on the data filled in the form.
 - **tsb_save_Click:** This button updates the customer's data. It will save the changes made to the customer's registry in the database.
 - **tsb_clean_Click:** This button will clear all fields in the form.
 
 These are almost the complete CRUD operations, except for the delete operation, which, in this case, is not allowed for customers to be deleted by the application.
+
+> ### Methods
+The main method of this form is `public void Capture()`. This method will be called in the customer list form `Frm_CustomersList`. When the user selects the desired customer, this method will be called, capturing the code of this customer and bringing it to the `Frm_Customers` form, populating the textboxes with the customer's data and calling three more methods:
+
+- ListContacts();
+- ListCompanies();
+- ListServices();
