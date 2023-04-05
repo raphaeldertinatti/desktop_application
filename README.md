@@ -136,3 +136,20 @@ For more details access the full code.
 ## 4. Frm_Customers
 
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Customers.png)
+
+> ### Listviews
+This is the Customers form, which has three ListViews:
+
+- Contacts: individuals registered as contacts of the customer, with name, phone number, position, and email.
+- Companies: the different companies registered that the customer owns.
+- Services: the list of services provided to that customer, such as filtering by department.
+
+> ### Buttons
+In this form, there are four buttons, which are:
+
+- tsb_search_Click: This is the button to search for customers in the registry. When clicked, it will open the Frm_CustomersList form, returning a list of registered customers. I will talk about this form in the next topic.
+- tsb_add_Click: This button adds the customer to the database based on the data filled in the form.
+- tsb_save_Click: This button updates the customer's data. It will save the changes made to the customer's registry in the database.
+- tsb_clean_Click: This button will clear all fields in the form.
+
+These are almost the complete CRUD operations, except for the delete operation, which, in this case, is not allowed for customers to be deleted by the application.
