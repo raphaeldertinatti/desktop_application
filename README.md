@@ -168,4 +168,22 @@ These methods will populate the three ListViews that exists in this Form.
 ## 4.1 Frm_CustomersList
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_CustomersList.png)
 
+This form is opened when the user clicks on the `tsb_search_Click` button of the `Frm_Customers` form, returning with a list of customers from the database.
 
+> ### Listviews
+- **lsv_customers**: This ListView returns all customers registered in the database with the information of code, name, and status.
+
+> ### Buttons
+- **btn_search_Click:** This button searches for clients using filters for Name and Status, populating the listview.
+
+- **btn_select_Click:** This button simply closes the form.
+
+> ### Methods
+- **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of clients.
+- **lsv_clientes_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Customers form.
+- **Frm_ListaCliente_FormClosed():** 
+
+
+
+
+[code: Frm_CustomersList.cs]()
