@@ -181,9 +181,6 @@ This form is opened when the user clicks on the `tsb_search_Click` button of the
 > ### Methods
 - **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of clients.
 - **lsv_clientes_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Customers form.
-- **Frm_ListaCliente_FormClosed():** 
+- **Frm_ListaCliente_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Customer` is called.
 
-
-
-
-[code: Frm_CustomersList.cs]()
+[code: Frm_CustomersList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CustomersList.cs).
