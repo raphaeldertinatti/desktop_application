@@ -190,3 +190,15 @@ This form is opened when the user clicks on the `tsb_search_Click` button of the
 ## 5. Frm_Companies
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Companies.png)
 
+This is the form for querying, modifying or including companies, where each company is associated with a customer, and a customer can have multiple companies, such as the parent company and all its subsidiaries.
+
+The structure of this form is very similar to that of customers, in fact, most of these registration forms are similar.
+
+> ### Buttons
+- **tsb_search_Click_1:** This button search for companies in the registry. When clicked, it will open the `Frm_CompaniesList` form, returning a list of registered companies.
+- **tsb_add_Click:** This button adds the companie to the database based on the data filled in the form, to include a company, it is necessary to have previously selected a customer to which the company belongs through the button `btn_associa_Click`.
+- **tsb_save_Click:** This button updates the company data. It will save the changes made to the company registry in the database.
+- **tsb_clean_Click:** This button will clear all fields in the form.
+- **btn_associa_Click:** This button will open the Frm_CompaniesXCustomers form with a list of customers so that a company can be associated with its respective customer.
+
+> ### Methods
