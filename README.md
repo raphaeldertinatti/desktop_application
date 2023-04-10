@@ -226,3 +226,20 @@ This form is opened when the user clicks on the `tsb_search_Click_1` button of t
 - **Frm_CompaniesList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Companies` is called.
 
 [code: Frm_CompaniesList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CompaniesList.cs)
+
+## 5.2 Frm_CompaniesXCustomers
+This form is opened when the user clicks on the `btn_associa_Click` button of the `Frm_Companies` form, returning with a list of customers from the database, so that the user can associate the company registration with its respective client.
+
+> ### Listviews
+- **lsv_customers2**: This ListView returns all customers registered in the database with the information of code, name, and status.
+
+> ### Buttons
+- **btn_search_Click:** This button searches for customers using filters for Name and Status, populating the listview.
+- **btn_select_Click:** This button simply closes the form.
+
+> ### Methods
+- **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of customers.
+- **lsv_customers_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Companies form.
+- **Frm_CompaniesXCustomers_FormClosed():** when this form is closed the method **CaptureCodCustomer()** of the `Frm_Companies` is called.
+
+[code: Frm_CompaniesXCustomers.cs]()
