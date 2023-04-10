@@ -199,6 +199,9 @@ The structure of this form is very similar to that of customers, in fact, most o
 - **tsb_add_Click:** This button adds the companie to the database based on the data filled in the form, to include a company, it is necessary to have previously selected a customer to which the company belongs through the button `btn_associa_Click`.
 - **tsb_save_Click:** This button updates the company data. It will save the changes made to the company registry in the database.
 - **tsb_clean_Click:** This button will clear all fields in the form.
-- **btn_associa_Click:** This button will open the Frm_CompaniesXCustomers form with a list of customers so that a company can be associated with its respective customer.
+- **btn_associa_Click:** This button will open the `Frm_CompaniesXCustomers` form with a list of customers so that a company can be associated with its respective customer.
 
 > ### Methods
+- **Capture():** This method will be called in the companies list form `Frm_CompaniesList`. When the user selects the desired company, this method will be called, capturing the code of this company and bringing it to the `Frm_Companies` form, populating the textboxes with the company data and calling one more method (below):
+- **CaptureCBB():** This method will check the state of the selected company and compare it with the character set of the `cbb_state` combobox. Upon finding the corresponding state, it will set the select index of the combobox to its respective state. The same is done for the `cbb_matriz` combobox, selecting whether the company is the parent company or a subsidiary.
+- **CaptureCodCustomer():** This method serves only to bring the selected customer code from the `Frm_CompaniesXCustomers` form to the *txt_Cliente.Text* field, following the same logic as the *Capture()* method.
