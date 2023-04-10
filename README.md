@@ -186,3 +186,6 @@ This form is opened when the user clicks on the `tsb_search_Click` button of the
 - **Frm_ListaCliente_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Customer` is called.
 
 [code: Frm_CustomersList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CustomersList.cs)
+
+## 5. Frm_Companies
+
