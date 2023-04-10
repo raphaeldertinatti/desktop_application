@@ -243,3 +243,5 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 - **Frm_CompaniesXCustomers_FormClosed():** when this form is closed the method **CaptureCodCustomer()** of the `Frm_Companies` is called.
 
 [code: Frm_CompaniesXCustomers.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CompaniesXCustomers.cs)
+
+## 6. Contacts
