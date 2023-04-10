@@ -206,6 +206,8 @@ The structure of this form is very similar to that of customers, in fact, most o
 - **CaptureCBB():** This method will check the state of the selected company and compare it with the character set of the `cbb_state` combobox. Upon finding the corresponding state, it will set the select index of the combobox to its respective state. The same is done for the `cbb_matriz` combobox, selecting whether the company is the parent company or a subsidiary.
 - **CaptureCodCustomer():** This method serves only to bring the selected customer code from the `Frm_CompaniesXCustomers` form to the *txt_Cliente.Text* field, following the same logic as the *Capture()* method.
 
+[code: Frm_Companies.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Companies.cs)
+
 ## 5.1 Frm_CompaniesList
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_CompaniesList.png)
 
