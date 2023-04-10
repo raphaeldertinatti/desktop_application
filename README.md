@@ -223,6 +223,6 @@ This form is opened when the user clicks on the `tsb_search_Click_1` button of t
 > ### Methods
 - **ListCompanies():** Method called in the constructor of the form, populates the listview with the list of companies.
 - **lsv_companies_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Companies form.
-- **Frm_CompaniesList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Customer` is called.
+- **Frm_CompaniesList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Companies` is called.
 
 [code: Frm_CompaniesList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CompaniesList.cs)
