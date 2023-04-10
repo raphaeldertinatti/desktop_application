@@ -221,7 +221,7 @@ This form is opened when the user clicks on the `tsb_search_Click_1` button of t
 - **btn_select_Click:** This button simply closes the form.
 
 > ### Methods
-- **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of companies.
+- **ListCompanies():** Method called in the constructor of the form, populates the listview with the list of companies.
 - **lsv_companies_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Companies form.
 - **Frm_CompaniesList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Customer` is called.
 
