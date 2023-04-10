@@ -228,7 +228,7 @@ This form is opened when the user clicks on the `tsb_search_Click_1` button of t
 [code: Frm_CompaniesList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CompaniesList.cs)
 
 ## 5.2 Frm_CompaniesXCustomers
-This form is opened when the user clicks on the `btn_associa_Click` button of the `Frm_Companies` form, returning with a list of customers from the database, so that the user can associate the company registration with its respective client.
+This form is opened when the user clicks on the `btn_associa_Click` button of the `Frm_Companies` form, returning with a list of customers from the database, so that the user can associate the company registration with its respective customer.
 
 > ### Listviews
 - **lsv_customers2**: This ListView returns all customers registered in the database with the information of code, name, and status.
