@@ -205,3 +205,6 @@ The structure of this form is very similar to that of customers, in fact, most o
 - **Capture():** This method will be called in the companies list form `Frm_CompaniesList`. When the user selects the desired company, this method will be called, capturing the code of this company and bringing it to the `Frm_Companies` form, populating the textboxes with the company data and calling one more method (below):
 - **CaptureCBB():** This method will check the state of the selected company and compare it with the character set of the `cbb_state` combobox. Upon finding the corresponding state, it will set the select index of the combobox to its respective state. The same is done for the `cbb_matriz` combobox, selecting whether the company is the parent company or a subsidiary.
 - **CaptureCodCustomer():** This method serves only to bring the selected customer code from the `Frm_CompaniesXCustomers` form to the *txt_Cliente.Text* field, following the same logic as the *Capture()* method.
+
+## 5.1 Frm_CompaniesList
+![image]()
