@@ -207,4 +207,5 @@ The structure of this form is very similar to that of customers, in fact, most o
 - **CaptureCodCustomer():** This method serves only to bring the selected customer code from the `Frm_CompaniesXCustomers` form to the *txt_Cliente.Text* field, following the same logic as the *Capture()* method.
 
 ## 5.1 Frm_CompaniesList
-![image]()
+![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_CompaniesList.png)
+
