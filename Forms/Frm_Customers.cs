@@ -105,7 +105,7 @@ namespace DesktopApplication
 
         private void tsb_clean_Click(object sender, EventArgs e)
         {
-           Clean();
+           Clear();
         }
 
         private void tsb_add_Click(object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace DesktopApplication
                         MySqlDataReader reader = cmd.ExecuteReader();
                         MessageBox.Show("Customer added with success! To add companies, contacts and services for this customer access the respective forms.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
-                        Clean();
+                        Clear();
                     }
                     catch (Exception ex)
                     {
@@ -289,7 +289,7 @@ namespace DesktopApplication
             }            
         } 
 
-        private void Clean()
+        private void Clear()
         {
             txt_codcliente.Text = "";
             txt_NomeCliente.Text = "";
