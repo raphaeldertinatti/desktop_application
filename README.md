@@ -242,4 +242,4 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 - **lsv_customers_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Companies form.
 - **Frm_CompaniesXCustomers_FormClosed():** when this form is closed the method **CaptureCodCustomer()** of the `Frm_Companies` is called.
 
-[code: Frm_CompaniesXCustomers.cs]()
+[code: Frm_CompaniesXCustomers.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CompaniesXCustomers.cs)
