@@ -188,4 +188,5 @@ This form is opened when the user clicks on the `tsb_search_Click` button of the
 [code: Frm_CustomersList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CustomersList.cs)
 
 ## 5. Frm_Companies
+![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Companies.png)
 
