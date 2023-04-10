@@ -182,8 +182,8 @@ This form is opened when the user clicks on the `tsb_search_Click` button of the
 
 > ### Methods
 - **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of clients.
-- **lsv_clientes_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Customers form.
-- **Frm_ListaCliente_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Customer` is called.
+- **lsv_customers_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Customers form.
+- **Frm_CustomersList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Customer` is called.
 
 [code: Frm_CustomersList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CustomersList.cs)
 
@@ -211,3 +211,18 @@ The structure of this form is very similar to that of customers, in fact, most o
 ## 5.1 Frm_CompaniesList
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_CompaniesList.png)
 
+This form is opened when the user clicks on the `tsb_search_Click_1` button of the `Frm_Companies` form, returning with a list of companies from the database.
+
+> ### Listviews
+- **lsv_companies**: This ListView returns all companies registered in the database with their information.
+
+> ### Buttons
+- **btn_search_Click:** This button searches for companies using filters for Name and Status, populating the listview.
+- **btn_select_Click:** This button simply closes the form.
+
+> ### Methods
+- **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of companies.
+- **lsv_companies_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Companies form.
+- **Frm_CompaniesList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Customer` is called.
+
+[code: Frm_CompaniesList.cs]()
