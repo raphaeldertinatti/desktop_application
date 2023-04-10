@@ -105,16 +105,7 @@ namespace DesktopApplication
 
         private void tsb_clean_Click(object sender, EventArgs e)
         {
-            txt_codcustomer.Text = "";
-            txt_CustomerName.Text = "";
-            txt_Partners.Text = "";
-            txt_Website.Text = "";
-            txt_status.Text = "";
-            lsv_contacts.Items.Clear();
-            lsv_companies.Items.Clear();
-            lsv_services.Items.Clear();
-            cbb_dep.Text = "";
-            cbb_dep.Enabled = false;
+           Clean();
         }
 
         private void tsb_add_Click(object sender, EventArgs e)
@@ -143,11 +134,7 @@ namespace DesktopApplication
                         MySqlDataReader reader = cmd.ExecuteReader();
                         MessageBox.Show("Customer added with success! To add companies, contacts and services for this customer access the respective forms.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
-                        txt_codcustomer.Text = "";
-                        txt_CustomerName.Text = "";
-                        txt_Partners.Text = "";
-                        txt_Website.Text = "";
-                        txt_status.Text = "";
+                        Clean();
                     }
                     catch (Exception ex)
                     {
@@ -300,7 +287,21 @@ namespace DesktopApplication
             {
                 connection.CloseConnection();
             }            
-        }        
+        } 
+
+        private void Clean()
+        {
+            txt_codcliente.Text = "";
+            txt_NomeCliente.Text = "";
+            txt_Socios.Text = "";
+            txt_Website.Text = "";
+            txt_status.Text = "";
+            lsv_contatos.Items.Clear();
+            lsv_empresas.Items.Clear();
+            lsv_servicos.Items.Clear();
+            cbb_dep.Text = "";
+            cbb_dep.Enabled = false;
+        }       
     }
     
 }
