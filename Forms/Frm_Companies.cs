@@ -128,27 +128,30 @@ namespace DesktopApplication
 
         public void CaptureCodCustomer ()
         {
-            try
+            if (!(txt_codcompany.Text == ""))
             {
-                connection.OpenConnection();
-                string sql = "SELECT * FROM db_sis.tb_customers WHERE cod_customer=" + int.Parse(txt_codcustomer.Text);               
-                MySqlCommand cmd = new MySqlCommand(sql, connection.conn);
-
-                using (MySqlDataReader reader = cmd.ExecuteReader())
+                try
                 {
-                    while(reader.Read())
+                    connection.OpenConnection();
+                    string sql = "SELECT * FROM db_sis.tb_customers WHERE cod_customer=" + int.Parse(txt_codcustomer.Text);               
+                    MySqlCommand cmd = new MySqlCommand(sql, connection.conn);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        txt_customer.Text = reader.GetString("CUSTOMER_NAME");
+                        while(reader.Read())
+                        {
+                            txt_customer.Text = reader.GetString("CUSTOMER_NAME");
+                        }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                connection.CloseConnection();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    connection.CloseConnection();
+                }
             }
         }
 		
