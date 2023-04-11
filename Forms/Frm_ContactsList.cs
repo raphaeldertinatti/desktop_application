@@ -71,7 +71,7 @@ namespace DesktopApplication
                 };
                 MySqlCommand cmd = connection.CreateCommand(sql, parameters);
                 lsv_contacts.Items.Clear();
-                int[] columnIndexes = { 0, 1, 2, 3, 4, 5 };
+                int[] columnIndexes = { 0, 2, 3, 4, 5 };
                 populate.PopulateListViews(lsv_contacts, cmd, columnIndexes);
             }
             catch (Exception ex)
