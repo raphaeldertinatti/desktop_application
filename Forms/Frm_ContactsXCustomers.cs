@@ -78,7 +78,7 @@ namespace DesktopApplication
                 MySqlParameter[] parameters = new MySqlParameter[]
                 {
                     new MySqlParameter("@NAME","%" + txt_buscar.Text + "%"),
-                    new MySqlParameter("@STATUS","%" + cbb_status.Text + "%")
+                    new MySqlParameter("@STATUS", cbb_status.Text)
                 };
 
                 MySqlCommand cmd = connection.CreateCommand(sql,parameters); 
