@@ -283,6 +283,21 @@ This is the form that returns the list of clients, the form is opened when the u
 
 [code: Frm_ContactsList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_ContactsList.cs)
 
+## 6.2 Frm_ContactsXCustomers
 
+This form is opened when the user clicks on the `btn_associa_Click` button of the `Frm_Contacts` form, returning with a list of customers from the database, so that the user can associate the contact registration with its respective customer.
 
+> ### Listviews
+- **lsv_customers2**: This ListView returns all customers registered in the database with the information of code, name, and status.
+
+> ### Buttons
+- **btn_search_Click:** This button searches for customers using filters for Name and Status, populating the listview.
+- **btn_select_Click:** This button simply closes the form.
+
+> ### Methods
+- **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of customers.
+- **lsv_customers2_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Contacts form.
+- **Frm_ContactsXCustomers_FormClosed():** when this form is closed the method **CaptureCodCustomer()** of the `Frm_Contacts` is called.
+
+[code: Frm_ContactsXCustomers.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_ContactsXCustomers.cs)
 
