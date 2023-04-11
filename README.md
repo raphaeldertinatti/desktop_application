@@ -248,3 +248,20 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 
 ## 6. Frm_Contacts
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Contacts.png)
+
+This is the contact form where you can register contacts and associate them with their respective clients. This form allows for the full CRUD process, allowing you to create, read, update, or delete contact information.
+
+> ### Buttons
+- **tsb_search_Click:** This button search for contacts in the registry. When clicked, it will open the `Frm_ContactList` form, returning a list of registered contacts.
+- **tsb_add_Click:** This button adds the contact to the database based on the data filled in the form, to include a contact, it is necessary to have previously selected a customer to which the contact belongs through the button `btn_associa_Click`.
+- **tsb_save_Click:** This button updates the contact data. It will save the changes made to the contact registry in the database.
+- **tsb_clear_Click:** This button will clear all fields in the form.
+- **btn_associa_Click:** This button will open the `Frm_ContactsXCustomers` form with a list of customers so that a contact can be associated with its respective customer.
+- **tsb_delete_Click:** This button will delete the contact record in the database.
+
+> ### Methods
+- **Capture():** This method will be called in the contact list form `Frm_ContactsList`. When the user selects the desired contact, this method will be called, capturing the code of this contact and bringing it to the `Frm_Contacts` form, populating the textboxes with the contact data.
+
+- **CaptureCodCustomer():** This method serves only to bring the selected customer code from the `Frm_ContactsXCustomers` form to the *txt_Customer.Text* field, following the same logic as the *Capture()* method.
+
+[code: Frm_Contacts.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Contacts.cs)

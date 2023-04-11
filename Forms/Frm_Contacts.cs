@@ -148,7 +148,7 @@ namespace DesktopApplication
             }
         }
 
-        private void tsb_salvar_Click(object sender, EventArgs e)
+        private void tsb_save_Click(object sender, EventArgs e)
         {
             if (!(txt_codcontact.Text == ""))
             {
@@ -181,7 +181,7 @@ namespace DesktopApplication
             }
         }
 
-        private void tsb_excluir_Click(object sender, EventArgs e)
+        private void tsb_delete_Click(object sender, EventArgs e)
         {
             if (!(txt_codcontact.Text == ""))
             {
