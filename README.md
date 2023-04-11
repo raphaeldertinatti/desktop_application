@@ -119,6 +119,8 @@ The main form MDI contains a toolstrip menu, being the parent form that contains
     - Frm_ContactsXCustomers.
 - Frm_Departments.
 - Frm_Services.
+    - Frm_DepList.
+    - Frm_ServicesXCustomers.
 - Frm_Taxes.
 - Frm_Search_Doc.
 - Frm_Search_Products.
@@ -309,4 +311,6 @@ There is no component in the code structure of this form that does not already e
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Services.png)
 
 
+## 8.1 Frm_DepList
 
+## 8.2 Frm_ServicesXCustomers
