@@ -61,6 +61,7 @@ namespace DesktopApplication
             foreach (ListViewItem item in itens_selecionados)
             {
                 Frm_Contacts.instance.cod_customer.Text = item.SubItems[0].Text;
+                Frm_Contacts.instance.name_customer.Text = item.SubItems[1].Text;
             }
         }
 
@@ -94,11 +95,6 @@ namespace DesktopApplication
             {
                 connection.CloseConnection();
             }
-        }
-
-        private void Frm_ContactsXCustomers_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Frm_Contacts.instance.CapturaCodCliente();
-        }
+        }       
     }
 }

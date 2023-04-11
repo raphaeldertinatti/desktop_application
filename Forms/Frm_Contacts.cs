@@ -17,6 +17,7 @@ namespace DesktopApplication
         public static Frm_Contacts instance;
         public TextBox cod;
         public TextBox cod_customer;
+        public TextBox name_customer;
         
         public Frm_Contacts()
         {
@@ -24,6 +25,7 @@ namespace DesktopApplication
             instance = this;
             cod = txt_codcontact;
             cod_customer = txt_codcustomer;
+            name_customer = txt_Customer;
         }
 
         private void tsb_search_Click(object sender, EventArgs e)
@@ -74,34 +76,6 @@ namespace DesktopApplication
         {
             Frm_ContactsXCustomers list = new Frm_ContactsXCustomers();
             list.ShowDialog();
-        }
-
-        public void CaptureCodCustomer()
-        {
-            if (!(txt_codcontato.Text == ""))
-            {
-                try
-                {
-                    connection.OpenConnection();
-                    string sql = "SELECT * FROM db_sis.tb_customer WHERE COD_CUSTOMER=" + int.Parse(txt_codcustomer.Text);
-                    MySqlCommand cmd = new MySqlCommand(sql, connection.conn);
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            txt_Customer.Text = reader.GetString("CUSTOMER_NAME");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    connection.CloseConnection();
-                }
-            }
         }
 
         private void tsb_add_Click(object sender, EventArgs e)

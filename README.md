@@ -262,8 +262,6 @@ This is the contact form where you can register contacts and associate them with
 > ### Methods
 - **Capture():** This method will be called in the contact list form `Frm_ContactsList`. When the user selects the desired contact, this method will be called, capturing the code of this contact and bringing it to the `Frm_Contacts` form, populating the textboxes with the contact data.
 
-- **CaptureCodCustomer():** This method serves only to bring the selected customer code from the `Frm_ContactsXCustomers` form to the *txt_Customer.Text* field, following the same logic as the *Capture()* method.
-
 [code: Frm_Contacts.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Contacts.cs)
 
 ## 6.1 Frm_ContactsList
@@ -296,8 +294,7 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 
 > ### Methods
 - **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of customers.
-- **lsv_customers2_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Contacts form.
-- **Frm_ContactsXCustomers_FormClosed():** when this form is closed the method **CaptureCodCustomer()** of the `Frm_Contacts` is called.
+- **lsv_customers2_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod_customer.Text` and `name_customer.Text` variables instantiated in the Frm_Contacts form.
 
 [code: Frm_ContactsXCustomers.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_ContactsXCustomers.cs)
 
