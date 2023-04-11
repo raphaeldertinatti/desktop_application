@@ -265,3 +265,24 @@ This is the contact form where you can register contacts and associate them with
 - **CaptureCodCustomer():** This method serves only to bring the selected customer code from the `Frm_ContactsXCustomers` form to the *txt_Customer.Text* field, following the same logic as the *Capture()* method.
 
 [code: Frm_Contacts.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Contacts.cs)
+
+## 6.1 Frm_ContactsList
+This is the form that returns the list of clients, the form is opened when the user clicks on the `tsb_search_Click` button of the `Frm_Contacts` form. I won't include the image, as all list forms are practically the same.
+
+> ### Listviews
+- **lsv_contacts**: This ListView returns all contacts registered in the database with their information.
+
+> ### Buttons
+- **btn_search_Click:** This button searches for contacts using a filter for Name, populating the listview.
+- **btn_select_Click:** This button simply closes the form.
+
+> ### Methods
+- **ListContacts():** Method called in the constructor of the form, populates the listview with the list of contacts.
+- **lsv_contacts_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Contacts form.
+- **Frm_ContactsList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Contacts` is called.
+
+[code: Frm_ContactsList.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_ContactsList.cs)
+
+
+
+

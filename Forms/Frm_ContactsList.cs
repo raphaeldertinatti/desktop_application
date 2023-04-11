@@ -86,7 +86,7 @@ namespace DesktopApplication
 
         private void Frm_ContactsList_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Frm_Contatos.instance.Captura();
+            Frm_Contacts.instance.Captura();
         }
 
         private void lsv_contacts_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
