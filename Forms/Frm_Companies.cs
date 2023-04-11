@@ -154,20 +154,7 @@ namespace DesktopApplication
 		
         private void tsb_clean_Click(object sender, EventArgs e)
         {
-            txt_codcompany.Text = "";
-            txt_status.Text = "";
-            txt_codcustomer.Text = "";
-            txt_customer.Text = "";
-            txt_status.Text = "";
-            cbb_matriz.SelectedIndex = -1;
-            cbb_state.SelectedIndex = -1;
-            txt_razaoSocial.Text = "";
-            txt_cnpj.Text = "";
-            txt_address.Text = "";
-            txt_city.Text = "";
-            txt_IE.Text = "";
-            btn_associa.Enabled = true;
-            txt_nomefantasia.Text = "";
+            Clear();
         }
 
         private void btn_associa_Click(object sender, EventArgs e)
@@ -208,20 +195,7 @@ namespace DesktopApplication
                         MySqlDataReader reader = cmd.ExecuteReader();
                         MessageBox.Show("Company included successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                        
-                        txt_codcompany.Text = "";
-                        txt_nomefantasia.Text = "";
-                        txt_status.Text = "";
-                        txt_codcustomer.Text = "";
-                        txt_customer.Text = "";
-                        txt_status.Text = "";
-                        cbb_matriz.SelectedIndex = -1;
-                        cbb_state.SelectedIndex = -1;
-                        txt_razaoSocial.Text = "";
-                        txt_cnpj.Text = "";
-                        txt_address.Text = "";
-                        txt_city.Text = "";
-                        txt_IE.Text = "";
-                        btn_associa.Enabled = true;
+                        Clear();
                     }
                     catch (Exception ex)
                     {
@@ -274,6 +248,24 @@ namespace DesktopApplication
                     connection.CloseConnection();
                 }
             }
+        }
+
+       private void Clear()
+        {
+            txt_codempresa.Text = "";
+            txt_status.Text = "";
+            txt_codcliente.Text = "";
+            txt_Cliente.Text = "";
+            txt_status.Text = "";
+            cbb_matriz.SelectedIndex = -1;
+            cbb_UF.SelectedIndex = -1;
+            txt_razaoSocial.Text = "";
+            txt_cnpj.Text = "";
+            txt_endereco.Text = "";
+            txt_cidade.Text = "";
+            txt_IE.Text = "";
+            btn_associa.Enabled = true;
+            txt_nomefantasia.Text = "";
         }
     }
 }
