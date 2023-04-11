@@ -299,4 +299,11 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 ## 7. Frm_Departments
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Departments.png)
 
+Form for querying and adding departments. As this is something that will not be created, deleted, or changed frequently, only query and add options are available. In the context of our application, these departments are the company's own departments. They need to exist in the database so that the services the company provides can be separated by department.
+
+There is no component in the code structure of this form that does not already exist in the previous ones, so I will not detail it.
+
+
+
+
 
