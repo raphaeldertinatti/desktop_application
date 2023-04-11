@@ -246,4 +246,5 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 
 [code: Frm_CompaniesXCustomers.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CompaniesXCustomers.cs)
 
-## 6. Contacts
+## 6. Frm_Contacts
+![image]()
