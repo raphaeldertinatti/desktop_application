@@ -11,13 +11,13 @@ using MySql.Data.MySqlClient;
 
 namespace DesktopApplication
 {
-    public partial class Frm_ContactList : Form
+    public partial class Frm_ContactsList : Form
     {
-        public static Frm_ContactList instance;
+        public static Frm_ContactsList instance;
         cls_mysql_conn connection = new cls_mysql_conn();
         cls_populate_views populate = new cls_populate_views();
 
-        public Frm_ContactList()
+        public Frm_ContactsList()
         {
             InitializeComponent();
             instance = this;
@@ -84,7 +84,7 @@ namespace DesktopApplication
             }
         }
 
-        private void Frm_ContactList_FormClosed(object sender, FormClosedEventArgs e)
+        private void Frm_ContactsList_FormClosed(object sender, FormClosedEventArgs e)
         {
             Frm_Contatos.instance.Captura();
         }
