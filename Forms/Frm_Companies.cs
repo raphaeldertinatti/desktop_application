@@ -16,6 +16,7 @@ namespace DesktopApplication
         public static Frm_Companies instance;
         public TextBox cod;
         public TextBox cod_customer;
+        public TextBox name_customer;
         public string state;
         public string tipo;
         cls_mysql_conn connection = new cls_mysql_conn();
@@ -27,6 +28,8 @@ namespace DesktopApplication
             instance = this;
             cod = txt_codcompany;
             cod_customer = txt_codcustomer;
+            name_customer = txt_Cliente;
+
             cbb_matriz.Items.Clear();
             cbb_matriz.Items.Add("Matriz");
             cbb_matriz.Items.Add("Filial");
@@ -124,36 +127,7 @@ namespace DesktopApplication
                 }
             }
 
-        }
-
-        public void CaptureCodCustomer ()
-        {
-            if (!(txt_codcompany.Text == ""))
-            {
-                try
-                {
-                    connection.OpenConnection();
-                    string sql = "SELECT * FROM db_sis.tb_customers WHERE cod_customer=" + int.Parse(txt_codcustomer.Text);               
-                    MySqlCommand cmd = new MySqlCommand(sql, connection.conn);
-
-                    using (MySqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        while(reader.Read())
-                        {
-                            txt_customer.Text = reader.GetString("CUSTOMER_NAME");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    connection.CloseConnection();
-                }
-            }
-        }
+        }        
 		
         private void tsb_clean_Click(object sender, EventArgs e)
         {
