@@ -240,7 +240,7 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 
 > ### Methods
 - **ListCustomers():** Method called in the constructor of the form, populates the listview with the list of customers.
-- **lsv_customers_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod.Text` variable instantiated in the Frm_Companies form.
+- **lsv_customers_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod_customer.Text` and `name_customer.Text` variables instantiated in the Frm_Companies form.
 
 [code: Frm_CompaniesXCustomers.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CompaniesXCustomers.cs)
 
