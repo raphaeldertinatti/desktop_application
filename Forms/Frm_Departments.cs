@@ -88,6 +88,10 @@ namespace DesktopApplication
                     {
                         MessageBox.Show(ex.Message);
                     }
+                    finally
+                    {
+                        connection.CloseConnection();
+                    }
                 }
             }
             else
