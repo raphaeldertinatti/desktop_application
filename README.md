@@ -310,6 +310,27 @@ There is no component in the code structure of this form that does not already e
 ## 8. Frm_Services
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Services.png)
 
+In this form, it is possible to add and modify the services that the company provides, as well as link a specific service to a customer, meaning that the company provides a certain service to the customer. Through two Listviews, we can also see all the registered services and the services filtered by customer.
+
+> ### Listviews
+- **lsv_services**: This ListView returns all services registered in the database with their information.
+- **lsv_servclient**: This ListView returns all services registered linked with the respective customer, being able to filter by customer selected.
+
+> ### Buttons
+- **tsb_clear_Click:** This button will clear all fields in the form.
+- **btn_department_Click:** This button search for departments in the registry. When clicked, it will open the `Frm_DepList` form, returning a list of registered departments.
+- - **tsb_add_Click:** This button adds the service to the database based on the data filled in the form, it is necessary to have previously selected a department to which the service belongs through the button `btn_department_Click`.After including a service, you can select a customer by clicking on the `btn_associa_Click` button, and then link the service to one or more customers through the `btn_vincula_Click` button.
+- **tsb_save_Click:** This button updates the service data. It will save the changes made to the service registry in the database.
+- **btn_associa_Click:** This button will open the `Frm_ServicesXCustomers` form with a list of customers so that a contact can be associated with its respective customer.
+- **btn_vincula_Click:** This button link the service with the selected customer.
+
+> ### Methods
+- **ListServices():** Method called in the constructor of the form, populates the listview with the list of all services.
+- **ListServCustomers():** Method called in the constructor of the form, populates the listview with the list of all services liked to your respective customer. 
+- **ListServicesDEP():** Method called inside the `Frm_DepList` when the form is closed. It will populate the `lsv_services` listview filtering by the select department.
+- **ListServCustomersDEP():**Method called inside the `Frm_DepList` when the form is closed. It will populate the `lsv_servclient` listview filtering by the select customer if there is one selected.
+- **lsv_services_ItemSelectionChanged():** This method maps the selected item in the listview.
+- **Frm_CompaniesList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Companies` is called.
 
 ## 8.1 Frm_DepList
 
