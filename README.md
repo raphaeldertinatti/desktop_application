@@ -319,7 +319,7 @@ In this form, it is possible to add and modify the services that the company pro
 > ### Buttons
 - **tsb_clear_Click:** This button will clear all fields in the form.
 - **btn_department_Click:** This button search for departments in the registry. When clicked, it will open the `Frm_DepList` form, returning a list of registered departments.
-- - **tsb_add_Click:** This button adds the service to the database based on the data filled in the form, it is necessary to have previously selected a department to which the service belongs through the button `btn_department_Click`.After including a service, you can select a customer by clicking on the `btn_associa_Click` button, and then link the service to one or more customers through the `btn_vincula_Click` button.
+- **tsb_add_Click:** This button adds the service to the database based on the data filled in the form, it is necessary to have previously selected a department to which the service belongs through the button `btn_department_Click`.After including a service, you can select a customer by clicking on the `btn_associa_Click` button, and then link the service to one or more customers through the `btn_vincula_Click` button.
 - **tsb_save_Click:** This button updates the service data. It will save the changes made to the service registry in the database.
 - **btn_associa_Click:** This button will open the `Frm_ServicesXCustomers` form with a list of customers so that a contact can be associated with its respective customer.
 - **btn_vincula_Click:** This button link the service with the selected customer.
