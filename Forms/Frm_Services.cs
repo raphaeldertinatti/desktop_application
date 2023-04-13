@@ -171,7 +171,7 @@ namespace DesktopApplication
         }
         private void btn_department_Click(object sender, EventArgs e)
         {
-            Frm_Lista_DEP list = new Frm_Lista_DEP();
+            Frm_DepList list = new Frm_DepList();
             list.ShowDialog();
         }
         private void tsb_add_Click(object sender, EventArgs e)

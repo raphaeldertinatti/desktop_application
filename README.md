@@ -332,6 +332,8 @@ In this form, it is possible to add and modify the services that the company pro
 - **lsv_services_ItemSelectionChanged():** This method maps the selected item in the listview.
 
 [code: Frm_Services.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Services.cs)
+
 ## 8.1 Frm_DepList
+
 
 ## 8.2 Frm_ServicesXCustomers
