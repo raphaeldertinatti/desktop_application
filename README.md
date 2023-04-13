@@ -330,8 +330,8 @@ In this form, it is possible to add and modify the services that the company pro
 - **ListServicesDEP():** Method called inside the `Frm_DepList` when the form is closed. It will populate the `lsv_services` listview filtering by the select department.
 - **ListServCustomersDEP():** Method called inside the `Frm_DepList` when the form is closed. It will populate the `lsv_servclient` listview filtering by the select customer if there is one selected.
 - **lsv_services_ItemSelectionChanged():** This method maps the selected item in the listview.
-- **Frm_CompaniesList_FormClosed():** when this form is closed the method **Capture()** of the `Frm_Companies` is called.
 
+[code: Frm_Services.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Services.cs)
 ## 8.1 Frm_DepList
 
 ## 8.2 Frm_ServicesXCustomers
