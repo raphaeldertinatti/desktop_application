@@ -26,5 +26,19 @@ namespace DesktopApplication
                 }
             }
         }
+
+        public void ConstructListView(ListView listview, string[] headers, int[] widths)
+        {
+            listview.View = View.Details;
+            listview.LabelEdit = true;
+            listview.AllowColumnReorder = true;
+            listview.FullRowSelect = true;
+            listview.GridLines = true;
+
+            for (int i = 0; i < headers.Length; i++)
+            {
+                listview.Columns.Add(headers[i], widths[i], HorizontalAlignment.Left);
+            }
+        }
     }
 }

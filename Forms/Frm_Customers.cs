@@ -25,36 +25,17 @@ namespace DesktopApplication
             InitializeComponent();
             instance = this; 
             cod = txt_codcustomer;
-            lsv_contacts.View = View.Details;
-            lsv_contacts.LabelEdit = true;
-            lsv_contacts.AllowColumnReorder = true;
-            lsv_contacts.FullRowSelect = true;
-            lsv_contacts.GridLines = true;
-            lsv_contacts.Columns.Add("Name", 180, HorizontalAlignment.Left);
-            lsv_contacts.Columns.Add("Job_Role", 140, HorizontalAlignment.Left);
-            lsv_contacts.Columns.Add("e-mail", 180, HorizontalAlignment.Left);
-            lsv_contacts.Columns.Add("Telephone",160, HorizontalAlignment.Left);
 
-            lsv_companies.View = View.Details;
-            lsv_companies.LabelEdit = true;
-            lsv_companies.AllowColumnReorder = true;
-            lsv_companies.FullRowSelect = true;
-            lsv_companies.GridLines = true;            
-            lsv_companies.Columns.Add("Razão Social", 190, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("CNPJ", 110, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("Type", 40, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("I.E.", 130, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("Address", 360, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("City", 120, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("UF", 40, HorizontalAlignment.Left);
+            string[] headers_c = { "Nome", "Cargo", "e-mail", "Telefone" };
+            int[] widths_c = { 180, 140, 180, 160 };
+            string[] headers_e = { "Razão Social", "CNPJ", "Tipo", "I.E.", "Endereço", "Cidade", "UF" };
+            int[] widths_e = { 190, 110, 40, 130, 360, 120, 40 };
+            string[] headers_s = {"Departamento","Serviço"};
+            int[] widths_s = { 100, 280 };
 
-            lsv_services.View = View.Details;
-            lsv_services.LabelEdit = true;
-            lsv_services.AllowColumnReorder = true;
-            lsv_services.FullRowSelect = true;
-            lsv_services.GridLines = true;
-            lsv_services.Columns.Add("Department", 100, HorizontalAlignment.Left);
-            lsv_services.Columns.Add("Service", 280, HorizontalAlignment.Left);
+            populate.ConstructListView(lsv_contatos, headers_c, widths_c);            
+            populate.ConstructListView(lsv_empresas, headers_e, widths_e);
+            populate.ConstructListView(lsv_servicos, headers_s, widths_s); 
 
             cbb_dep.Enabled = false;           
         }        
