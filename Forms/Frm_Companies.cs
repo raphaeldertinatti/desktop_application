@@ -29,39 +29,17 @@ namespace DesktopApplication
             cod = txt_codcompany;
             cod_customer = txt_codcustomer;
             name_customer = txt_Cliente;
+            string[] UF = { "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO" };
 
             cbb_matriz.Items.Clear();
             cbb_matriz.Items.Add("Matriz");
             cbb_matriz.Items.Add("Filial");
 
-            cbb_state.Items.Clear();
-            cbb_state.Items.Add("AC");
-            cbb_state.Items.Add("AL");
-            cbb_state.Items.Add("AP");
-            cbb_state.Items.Add("AM");
-            cbb_state.Items.Add("BA");
-            cbb_state.Items.Add("CE");
-            cbb_state.Items.Add("DF");
-            cbb_state.Items.Add("ES");
-            cbb_state.Items.Add("GO");
-            cbb_state.Items.Add("MA");
-            cbb_state.Items.Add("MT");
-            cbb_state.Items.Add("MS");
-            cbb_state.Items.Add("MG");
-            cbb_state.Items.Add("PA");
-            cbb_state.Items.Add("PB");
-            cbb_state.Items.Add("PR");
-            cbb_state.Items.Add("PE");
-            cbb_state.Items.Add("PI");
-            cbb_state.Items.Add("RJ");
-            cbb_state.Items.Add("RN");
-            cbb_state.Items.Add("RS");
-            cbb_state.Items.Add("RO");
-            cbb_state.Items.Add("RR");
-            cbb_state.Items.Add("SC");
-            cbb_state.Items.Add("SP");
-            cbb_state.Items.Add("SE");
-            cbb_state.Items.Add("TO");            
+            cbb_UF.Items.Clear();
+            for (int i = 0; i < UF.Length; i++)
+            {
+                cbb_UF.Items.Add(UF[i]);    
+            }             
         }
 
         private void tsb_search_Click_1(object sender, EventArgs e)
