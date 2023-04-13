@@ -55,15 +55,17 @@ namespace DesktopApplication
                     connection.OpenConnection();
                     string sql = "SELECT * FROM db_sis.tb_customers WHERE " +
                              "COD_CUSTOMER = " + int.Parse(txt_codcustomer.Text);
+                    string[] column = {"NOME_CLIENTE","WEBSITE","SOCIOS","STATUS"};
+                    TextBox[] TextBoxes = {txt_NomeCliente,txt_Website,txt_Socios,txt_status};
                     MySqlCommand cmd = new MySqlCommand(sql, connection.conn);
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            txt_CustomerName.Text = reader.GetString("CUSTOMER_NAME");
-                            txt_Website.Text = reader.GetString("WEBSITE");
-                            txt_Partners.Text = reader.GetString("PARTNERS");
-                            txt_status.Text = reader.GetString("STATUS");
+                            for (int i = 0; i < column.Length; i++)
+                            {
+                                TextBoxes[i].Text = reader.GetString(column[i]);
+                            }
                         }
                     }
                     ListContacts();
