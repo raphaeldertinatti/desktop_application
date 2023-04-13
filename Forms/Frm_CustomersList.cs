@@ -21,14 +21,9 @@ namespace DesktopApplication
         {
             InitializeComponent();
             instance = this;
-            lsv_customers.View = View.Details;
-            lsv_customers.LabelEdit = true;
-            lsv_customers.AllowColumnReorder = true;
-            lsv_customers.FullRowSelect = true;
-            lsv_customers.GridLines = true;
-            lsv_customers.Columns.Add("Código Cliente", 80, HorizontalAlignment.Left);
-            lsv_customers.Columns.Add("Nome Cliente", 270, HorizontalAlignment.Left);
-            lsv_customers.Columns.Add("Status", 270, HorizontalAlignment.Left);            
+            string[] headers = { "Código Cliente", "Nome Cliente", "Status" };
+            int[] widths = { 80, 270, 270 };
+            populate.ConstructListView(lsv_customers, headers, widths);         
             cbb_status.SelectedIndex = 0;
             ListCustomers();
         }        

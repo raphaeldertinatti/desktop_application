@@ -33,9 +33,9 @@ namespace DesktopApplication
             string[] headers_s = {"Departamento","Serviço"};
             int[] widths_s = { 100, 280 };
 
-            populate.ConstructListView(lsv_contatos, headers_c, widths_c);            
-            populate.ConstructListView(lsv_empresas, headers_e, widths_e);
-            populate.ConstructListView(lsv_servicos, headers_s, widths_s); 
+            populate.ConstructListView(lsv_contacts, headers_c, widths_c);            
+            populate.ConstructListView(lsv_companies, headers_e, widths_e);
+            populate.ConstructListView(lsv_services, headers_s, widths_s); 
 
             cbb_dep.Enabled = false;           
         }        
