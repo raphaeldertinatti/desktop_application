@@ -326,7 +326,7 @@ In this form, it is possible to add and modify the services that the company pro
 
 > ### Methods
 - **ListServices():** Method called in the constructor of the form, populates the listview with the list of all services.
-- **ListServCustomers():** Method called in the constructor of the form, populates the listview with the list of all services liked to your respective customer. 
+- **ListServCustomers():** Method called in the constructor of the form, populates the listview with the list of all services linked to your respective customer. 
 - **ListServicesDEP():** Method called inside the `Frm_DepList` when the form is closed. It will populate the `lsv_services` listview filtering by the select department.
 - **ListServCustomersDEP():**Method called inside the `Frm_DepList` when the form is closed. It will populate the `lsv_servclient` listview filtering by the select customer if there is one selected.
 - **lsv_services_ItemSelectionChanged():** This method maps the selected item in the listview.
