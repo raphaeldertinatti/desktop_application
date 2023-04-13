@@ -51,7 +51,7 @@ namespace DesktopApplication
             }
         }
 
-        private void btn_Selecionar_Click(object sender, EventArgs e)
+        private void btn_Select_Click(object sender, EventArgs e)
         {
             this.Close();
         }

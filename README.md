@@ -335,5 +335,18 @@ In this form, it is possible to add and modify the services that the company pro
 
 ## 8.1 Frm_DepList
 
+This form is opened when the user clicks on the `btn_department_Click` button of the `Frm_Services` form, returning with a list of departments from the database.
+
+> ### Listviews
+- **lsv_dep**: This ListView returns all departments registered in the database with their information.
+
+> ### Buttons
+
+- **btn_select_Click:** This button simply closes the form.
+
+> ### Methods
+- **ListDEP():** Method called in the constructor of the form, populates the listview with the list of departments.
+- **lsv_companies_ItemSelectionChanged():** This method maps the selected item in the listview and passes this information to the `cod_dep.Text` and `desc_dep.Text` variables instantiated in the Frm_Contacts form.
+- **Frm_CompaniesList_FormClosed():** when this form is closed the methods **ListServicesDEP()** and **ListServCustomersDEP** of the `Frm_Services` is called.
 
 ## 8.2 Frm_ServicesXCustomers
