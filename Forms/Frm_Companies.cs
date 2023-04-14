@@ -168,19 +168,14 @@ namespace DesktopApplication
                 {
                     connection.OpenConnection();                    
                     string sql = "UPDATE db_sis.tb_companies SET NOME_FANTASIA = @NOMEF, RAZAO_SOCIAL = @RAZAOS, CNPJ = @CNPJ, TIPO_CNPJ = @TIPO_CNPJ, INSCRICAO_ESTADUAL = @IE, ADDRESS = @ADDRESS, CITY = @CITY, UF = @UF WHERE COD_EMPRESA = @COD";
+                    string[] param_name = { "@NOMEF", "@RAZAOS", "@CNPJ", "@TIPO_CNPJ", "@IE", "@ENDERECO", "@CIDADE", "@UF", "@COD" };
+                    dynamic[] dynamics = { txt_nomefantasia, txt_razaoSocial, txt_cnpj, cbb_matriz, txt_IE, txt_endereco, txt_cidade, cbb_UF, txt_codempresa};
+                    MySqlParameter[] parameters = new MySqlParameter[9];
 
-                    MySqlParameter[] parameters = new MySqlParameter[]
+                    for (int i = 0; i < param_name.Length; i++)
                     {
-                        new MySqlParameter("@NOMEF",txt_nomefantasia.Text),
-                        new MySqlParameter("@RAZAOS", txt_razaoSocial.Text),
-                        new MySqlParameter("@CNPJ", txt_cnpj.Text),
-                        new MySqlParameter("@TIPO_CNPJ", cbb_matriz.Text),
-                        new MySqlParameter("@IE", txt_IE.Text),
-                        new MySqlParameter("@ADDRESS", txt_address.Text),
-                        new MySqlParameter("@CITY", txt_city.Text),
-                        new MySqlParameter("@UF", cbb_state.Text),
-                        new MySqlParameter("@COD", int.Parse(txt_codcompany.Text))
-                    };
+                        parameters[i] = new MySqlParameter(param_name[i], dynamics[i].Text);
+                    }
 
                     MySqlCommand cmd = connection.CreateCommand(sql,parameters);
                     MySqlDataReader reader = cmd.ExecuteReader();
