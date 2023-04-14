@@ -19,13 +19,9 @@ namespace DesktopApplication
         public Frm_Departments()
         {
             InitializeComponent();            
-            lsv_department.View = View.Details;
-            lsv_department.LabelEdit = true;
-            lsv_department.AllowColumnReorder = true;
-            lsv_department.FullRowSelect = true;
-            lsv_department.GridLines = true;
-            lsv_department.Columns.Add("Cód", 40, HorizontalAlignment.Left);
-            lsv_department.Columns.Add("Departamento", 200, HorizontalAlignment.Left);            
+            string[] headers = { "Cód", "Departamento" };
+            int[] widths = { 40, 200 };
+            populate.ConstructListView(lsv_departamento, headers, widths);       
             ListarDepartamentos();
         }
         public void ListarDepartamentos()
