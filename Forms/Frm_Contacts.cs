@@ -41,17 +41,17 @@ namespace DesktopApplication
                 {
                     connection.OpenConnection();
                     string sql = " SELECT a.COD_CONTACT,a.COD_CUSTOMER,a.NOME,a.ROLE,a.EMAIL,a.TELEFONE,b.CUSTOMER_NAME FROM db_sis.tb_contacts a INNER JOIN db_sis.tb_customer b on a.COD_CUSTOMER = b.COD_CUSTOMER WHERE COD_CONTACT=" + int.Parse(txt_codcontact.Text);                  
+                    string[] column = { "COD_CLIENTE", "NOME_CLIENTE", "NOME", "CARGO", "EMAIL", "TELEFONE" };
+                    TextBox[] textBoxes = { txt_codcliente, txt_Cliente, txt_nome, txt_cargo, txt_email, txt_telefone };
                     MySqlCommand cmd = new MySqlCommand(sql, connection.conn);
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            txt_codcustomer.Text = reader.GetString("COD_CUSTOMER");
-                            txt_Customer.Text = reader.GetString("CUSTOMER_NAME");
-                            txt_nome.Text = reader.GetString("NOME");
-                            txt_ROLE.Text = reader.GetString("ROLE");
-                            txt_email.Text = reader.GetString("EMAIL");
-                            txt_telefone.Text = reader.GetString("TELEFONE");
+                            for (int i = 0; i < column.Length; i++)
+                            {
+                                textBoxes[i].Text = reader.GetString(column[i]);
+                            }
                         }
                     }
                     btn_associa.Enabled = false;                    
