@@ -22,19 +22,9 @@ namespace DesktopApplication
         {
             InitializeComponent();
             instance = this;            
-            lsv_companies.View = View.Details;
-            lsv_companies.LabelEdit = true;
-            lsv_companies.AllowColumnReorder = true;
-            lsv_companies.FullRowSelect = true;
-            lsv_companies.GridLines = true;
-            lsv_companies.Columns.Add("COD", 35, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("Razão Social", 190, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("CNPJ", 110, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("Tipo", 40, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("I.E.", 100, HorizontalAlignment.Left);            
-            lsv_companies.Columns.Add("Cidade", 120, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("UF", 40, HorizontalAlignment.Left);
-            lsv_companies.Columns.Add("STATUS", 70, HorizontalAlignment.Left);
+            string[] headers = { "COD", "Razão Social", "CNPJ", "Tipo", "I.E", "Cidade", "UF", "STATUS" };
+            int[] widths = { 35, 190, 110, 40, 100, 120, 40, 70 };
+            populate.ConstructListView(lsv_empresas, headers, widths);
             ListCompanies();
             cbb_status.SelectedIndex = 0;
         }
