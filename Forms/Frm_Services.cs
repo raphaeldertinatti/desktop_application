@@ -28,25 +28,13 @@ namespace DesktopApplication
             desc_dep = txt_department;
             cod_cliente = txt_codcustomer;
             desc_cliente = txt_Customer;
+            string[] header_s = { "Cód.Serviço", "Serviço", "Departamento" };
+            string[] header_sc = { "Cód.Cliente", "Nome Cliente", "Departamento", "Serviço" };
+            int[] width_s = { 80, 510, 120 };
+            int[] width_sc = { 80, 120, 100, 400 };
 
-            lsv_servicos.View = View.Details;
-            lsv_servicos.LabelEdit = true;
-            lsv_servicos.AllowColumnReorder = true;
-            lsv_servicos.FullRowSelect = true;
-            lsv_servicos.GridLines = true;
-            lsv_servicos.Columns.Add("Cód.Serviço", 80, HorizontalAlignment.Left);
-            lsv_servicos.Columns.Add("Serviço", 510, HorizontalAlignment.Left);
-            lsv_servicos.Columns.Add("Departamento", 120, HorizontalAlignment.Left);
-
-            lsv_servclient.View = View.Details;
-            lsv_servclient.LabelEdit = true;
-            lsv_servclient.AllowColumnReorder = true;
-            lsv_servclient.FullRowSelect = true;
-            lsv_servclient.GridLines = true;
-            lsv_servclient.Columns.Add("Cód.Cliente", 80, HorizontalAlignment.Left);
-            lsv_servclient.Columns.Add("Nome Cliente", 120, HorizontalAlignment.Left);
-            lsv_servclient.Columns.Add("Departamento", 100, HorizontalAlignment.Left);
-            lsv_servclient.Columns.Add("Serviço", 400, HorizontalAlignment.Left);             
+            populate.ConstructListView(lsv_servicos, header_s, width_s);
+            populate.ConstructListView(lsv_servclient, header_sc, width_sc);        
             ListServices();
             ListServCustomers();
         }
