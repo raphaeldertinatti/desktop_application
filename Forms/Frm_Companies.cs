@@ -55,23 +55,20 @@ namespace DesktopApplication
                 {
                     connection.OpenConnection();
                     string sql = "SELECT a.COD_CUSTOMER,a.RAZAO_SOCIAL,a.NOME_FANTASIA,a.CNPJ,a.INSCRICAO_ESTADUAL,a.ADDRESS,a.CITY,a.`STATUS`,a.UF,a.TIPO_CNPJ, b.CUSTOMER_NAME FROM db_sis.tb_companies a inner join db_sis.tb_customers b on a.cod_customer = b.cod_customer WHERE COD_EMPRESA=" + int.Parse(txt_codcompany.Text);                   
+                    string[] column = { "COD_CLIENTE", "NOME_CLIENTE", "NOME_FANTASIA", "RAZAO_SOCIAL", "CNPJ", "INSCRICAO_ESTADUAL", "ENDERECO", "CIDADE", "STATUS" };
+                    TextBox[] textBoxes = { txt_codcliente, txt_Cliente, txt_nomefantasia, txt_razaoSocial, txt_cnpj, txt_IE, txt_endereco, txt_cidade, txt_status };
                     MySqlCommand cmd = new MySqlCommand(sql, connection.conn);
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         while(reader.Read())
                         {
-                            txt_codcustomer.Text = reader.GetString("COD_CUSTOMER");
-                            txt_customer.Text = reader.GetString("CUSTOMER_NAME");
-                            txt_nomefantasia.Text = reader.GetString("NOME_FANTASIA");
-                            txt_razaoSocial.Text = reader.GetString("RAZAO_SOCIAL");
-                            txt_cnpj.Text = reader.GetString("CNPJ");
-                            txt_IE.Text = reader.GetString("INSCRICAO_ESTADUAL");
-                            txt_address.Text = reader.GetString("ADDRESS");
-                            txt_city.Text = reader.GetString("CITY");
-                            txt_status.Text = reader.GetString("STATUS");
-                            state = reader.GetString("UF");
-                            tipo = reader.GetString("TIPO_CNPJ");
-                            CaptureCBB();
+                            for (int i = 0; i < column.Length; i++)
+                            {
+                                textBoxes[i].Text = reader.GetString(column[i]);
+                            }
+                            estado = reader.GetString("UF");
+                            tipo = reader.GetString("TIPO_CNPJ");                            
+                            CapturaCBB();
                         }
                     }
                         btn_associa.Enabled = false;                    
@@ -132,19 +129,14 @@ namespace DesktopApplication
                     {
                         connection.OpenConnection();
                         string sql = "INSERT INTO db_sis.tb_companies (cod_customer, NOME_FANTASIA, RAZAO_SOCIAL, CNPJ, TIPO_CNPJ,INSCRICAO_ESTADUAL,ADDRESS,CITY,UF, STATUS) VALUES (@COD, @NOME, @RAZAOS, @CNPJ, @MATRIZ, @IE, @ADDRESS, @CITY, @cbb_state,'" + "ATIVO" + "')";
+                        string[] param_name = { "@COD", "@NOME", "@RAZAOS", "@CNPJ", "@MATRIZ", "@IE", "@ENDERECO", "@CIDADE", "@CBB_UF" };
+                        dynamic[] dynamics = { txt_codcliente, txt_nomefantasia, txt_razaoSocial, txt_cnpj, cbb_matriz, txt_IE, txt_endereco, txt_cidade, cbb_UF };
+                        MySqlParameter[] parameters = new MySqlParameter[9];
 
-                        MySqlParameter[] parameters = new MySqlParameter[]
+                        for (int i = 0; i < param_name.Length; i++)
                         {
-                            new MySqlParameter("@COD", txt_codcustomer.Text),
-                            new MySqlParameter("@NOME", txt_nomefantasia.Text), 
-                            new MySqlParameter("@RAZAOS", txt_razaoSocial.Text),
-                            new MySqlParameter("@CNPJ", txt_cnpj.Text),
-                            new MySqlParameter("@MATRIZ", cbb_matriz.Text),
-                            new MySqlParameter("@IE", txt_IE.Text),
-                            new MySqlParameter("@ADDRESS",txt_address.Text),
-                            new MySqlParameter("@CITY", txt_city.Text),
-                            new MySqlParameter("@cbb_state", cbb_state.Text)
-                        };
+                            parameters[i] = new MySqlParameter(param_name[i], dynamics[i].Text);
+                        }  
 
                         MySqlCommand cmd = connection.CreateCommand(sql, parameters);
                         MySqlDataReader reader = cmd.ExecuteReader();
