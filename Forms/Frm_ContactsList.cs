@@ -21,16 +21,9 @@ namespace DesktopApplication
         {
             InitializeComponent();
             instance = this;
-            lsv_contacts.View = View.Details;
-            lsv_contacts.LabelEdit = true;
-            lsv_contacts.AllowColumnReorder = true;
-            lsv_contacts.FullRowSelect = true;
-            lsv_contacts.GridLines = true;
-            lsv_contacts.Columns.Add("Cód", 40, HorizontalAlignment.Left);
-            lsv_contacts.Columns.Add("Nome", 160, HorizontalAlignment.Left);
-            lsv_contacts.Columns.Add("Cargo", 100, HorizontalAlignment.Left);
-            lsv_contacts.Columns.Add("e-mail", 190, HorizontalAlignment.Left);
-            lsv_contacts.Columns.Add("Telefone", 100, HorizontalAlignment.Left);
+            string[] headers = { "Cód", "Nome", "Cargo", "e-mail", "Telefone" };
+            int[] widths = { 40, 160, 100, 190, 100 };
+            populate.ConstructListView(lsv_contatos, headers, widths);
             ListContacts();            
         }
 
