@@ -25,7 +25,14 @@ namespace DesktopApplication
             string[] headers = { "COD", "Razão Social", "CNPJ", "Tipo", "I.E", "Cidade", "UF", "STATUS" };
             int[] widths = { 35, 190, 110, 40, 100, 120, 40, 70 };
             populate.ConstructListView(lsv_empresas, headers, widths);
-            ListCompanies();
+            if (Frm_Companies.instance != null)
+            {
+                ListCompanies();
+            }
+            if (Frm_TaxAudit.instance != null)
+            {
+                ListCompaniesAudit();
+            }
             cbb_status.SelectedIndex = 0;
         }
         public void btn_Select_Click(object sender, EventArgs e)
@@ -53,6 +60,26 @@ namespace DesktopApplication
                 connection.CloseConnection();
             }
 
+        }
+         public void ListCompaniesAudit()
+        {
+            try
+            {
+                connection.OpenConnection();
+                string sql = "SELECT * FROM db_sis.tb_empresa WHERE COD_CLIENTE = "+Frm_TaxAudit.instance.cod_cliente.Text;
+                MySqlCommand cmd = new MySqlCommand(sql, connection.conn);
+                lsv_empresas.Items.Clear();
+                int[] columnIndexes = { 0, 3, 4, 5, 6, 8, 9, 10 };
+                populate.PopulateListViews(lsv_empresas, cmd, columnIndexes);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.CloseConnection();
+            }
         }
         private void btn_search_Click(object sender, EventArgs e)
         {
