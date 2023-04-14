@@ -21,13 +21,9 @@ namespace DesktopApplication
         {
             InitializeComponent();
             instance = this;
-            lsv_dep.View = View.Details;
-            lsv_dep.LabelEdit = true;
-            lsv_dep.AllowColumnReorder = true;
-            lsv_dep.FullRowSelect = true;
-            lsv_dep.GridLines = true;
-            lsv_dep.Columns.Add("Código", 60, HorizontalAlignment.Left);
-            lsv_dep.Columns.Add("Departamento", 180, HorizontalAlignment.Left);            
+            string[] headers = { "Código", "Departamento" };
+            int[] widths = { 60, 180 };
+            populate.ConstructListView(lsv_dep, headers, widths);         
             ListDEP();            
         }
         public void ListDEP()
