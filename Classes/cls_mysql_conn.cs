@@ -21,7 +21,7 @@ namespace DesktopApplication
             user = "system_user";
             pass = "@aeiou0011*ABC";
 
-            string connectionString = $"datasource={server};username={user};password={pass};";
+            string connectionString = $"datasource={server};username={user};password={pass}; connect timeout = 120";
 
             conn = new MySqlConnection(connectionString);
         }
