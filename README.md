@@ -418,4 +418,6 @@ You will see that as we select the necessary data to perform the conference, the
 - **Check_Importado()**: This method simply populates the specified textbox informing that there are imported data for that client in that audit period, ir there are no datam the textbox will remain blank.
 - **GetSqlParameters()**: Method that contains all the MySqlParameters used in the form.
 
+Obs: IRS Internal Revenue Service is equivalent to Receita Federal ou SEFAZ. (Brazil)
+
 [code: Frm_TaxAudit.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_TaxAudit.cs)
