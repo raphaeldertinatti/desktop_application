@@ -251,7 +251,7 @@ namespace DesktopApplication
             f.ShowDialog();
         }
 
-        private void btn_valores_Click(object sender, EventArgs e)
+        private void btn_values_Click(object sender, EventArgs e)
         {
             Frm_Audit_Values f = new Frm_Audit_Values();
             f.ShowDialog();
