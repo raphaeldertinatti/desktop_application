@@ -186,7 +186,7 @@ namespace DesktopApplication
             Frm_Audit_IRS f = new Frm_Audit_IRS();
             f.ShowDialog();
         }
-        private void CheckRowsC5()
+        private void CheckRowsSys()
         {
             try
             {
@@ -204,7 +204,7 @@ namespace DesktopApplication
             }            
         }
 
-        private void CheckRowsNDD()
+        private void CheckRowsIRS()
         {
             try
             {
@@ -222,7 +222,7 @@ namespace DesktopApplication
             }
         }
 
-        private void CheckRowsNFornec()
+        private void CheckRowsNSupply()
         {
             try
             {

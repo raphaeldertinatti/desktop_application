@@ -404,9 +404,18 @@ This form is the general tax conference panel. By selecting the client, company,
 - **btn_transf_Click**: This button opens the `Frm_Transferencia` form that displays all transfer invoices issued during the period.
 - **btn_save_Click**: This button is used to save the observation/annotation for that conference. If the field is empty, the `InsertObs()` method will be called, which will insert the observation into the database table. If there is already an observation and the save button is pressed, the `UpdateObs()` method will be called, which will update the field in the table.
 
-
-
-
 > ### Methods
+
+I will only mention here the methods that are truly relevant and different from those previously mentioned in other forms, which only capture a code from another form, for example. The complete code is also available for verification below.
+
+You will see that as we select the necessary data to perform the conference, the components we previously selected are disabled and new components are enabled for selection. The method that enables all components is `cbb_ano_SelectionChangeCommitted()`, which is called when the year is selected in the final combobox, this method also call other four methods that will be explained below:
+
+- **CheckRowsSys()**: This method checks if there is an imported database for the system's fiscal data. If there is, the method `Check_Importado()` will be called.
+- **CheckRowsIRS()**: This method checks if there is an imported database for the IRS data. If there is, the method `Check_Importado()` will be called.
+- **CheckRowsNSupply()**: This method checks if there is an imported database for the Supplier data. If there is, the method `Check_Importado()` will be called.
+- **CapturaObs()**: Method that returns the observation that was saved in the database for that conference.
+- **Check_OpenForm()**: This method creates a DataTable and fills it with data retrieved from the database through a query passed as a parameter. It tests and, if the DataTable is filled with any rows, it means that there is information to be shown, and thus the form passed in the parameter is opened.
+- **Check_Importado()**: This method simply populates the specified textbox informing that there are imported data for that client in that audit period, ir there are no datam the textbox will remain blank.
+- **GetSqlParameters()**: Method that contains all the MySqlParameters used in the form.
 
 [code: Frm_TaxAudit.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_TaxAudit.cs)
