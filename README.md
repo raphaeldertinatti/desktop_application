@@ -123,7 +123,18 @@ The main form MDI contains a toolstrip menu, being the parent form that contains
     - Frm_ServicesXCustomers.
 - Frm_TaxAudit.
     - Frm_Lst_Cst_Audit.
-    - Frm Lst_Cmp_Aaudit.raphae
+    - Frm Lst_Cmp_Aaudit
+    - Frm_Audit_System.
+    - Frm_Audit_IRS.
+    - Frm_Audit_Supplier.
+    - Frm_Audit_Values.
+    - Frm_Audit_Cancelled.
+    - Frm_Audit_Unrelated.
+    - Frm_Analyses.
+    - Frm_Natureza_Operacao.
+    - Frm_CFOP_CST.
+    - Frm_Rural_Producer.
+    - Frm_Transferences.
 - Frm_Search_Doc.
 - Frm_Search_Products.
 
@@ -371,3 +382,4 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 [code: Frm_ServicesXCustomers.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_ServicesXCustomers.cs)
 
 ## 9. Frm_TaxAudit
+
