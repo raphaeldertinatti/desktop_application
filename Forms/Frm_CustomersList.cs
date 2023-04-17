@@ -59,27 +59,17 @@ namespace DesktopApplication
 
             foreach(ListViewItem item in itens_selecionados)
             {
-                if (Frm_Customers.instance != null)
-                {
-                    Frm_Customers.instance.cod.Text = item.SubItems[0].Text;
-                }
-                if (Frm_TaxAudit.instance != null)
-                {
-                    Frm_TaxAudit.instance.cod_cliente.Text = item.SubItems[0].Text;
-                }
+                
+                Frm_Customers.instance.cod.Text = item.SubItems[0].Text;
+                                
             }
         }
 
         public void Frm_CustomersList_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Frm_Customers.instance != null)
-            {
-                Frm_Customers.instance.Captura();
-            }
-            if (Frm_TaxAudit.instance != null)
-            {
-                Frm_TaxAudit.instance.CapturaCli();
-            }    
+            
+            Frm_Customers.instance.Captura();
+                           
         }
 
         private void btn_search_Click(object sender, EventArgs e)
