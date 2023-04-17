@@ -123,7 +123,7 @@ The main form MDI contains a toolstrip menu, being the parent form that contains
     - Frm_ServicesXCustomers.
 - Frm_TaxAudit.
     - Frm_Lst_Cst_Audit.
-    - Frm Lst_Cmp_Aaudit
+    - Frm Lst_Cmp_Audit
     - Frm_Audit_System.
     - Frm_Audit_IRS.
     - Frm_Audit_Supplier.
@@ -384,3 +384,10 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 ## 9. Frm_TaxAudit
 
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_TaxAudit.png)
+
+This form is the general tax conference panel. By selecting the client, company, and competence, and after importing the data source, which are .csv files related to the data of invoices issued in the system (System Button) and invoices issued and sent to the Internal Revenue Service (IRS Button), it is possible to perform various analyses and conferences by navigating through the other buttons that we will describe.
+
+> ### Buttons
+> ### Methods
+
+[code: Frm_TaxAudit.cs]()
