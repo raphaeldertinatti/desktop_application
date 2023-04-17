@@ -390,4 +390,4 @@ This form is the general tax conference panel. By selecting the client, company,
 > ### Buttons
 > ### Methods
 
-[code: Frm_TaxAudit.cs]()
+[code: Frm_TaxAudit.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_TaxAudit.cs)
