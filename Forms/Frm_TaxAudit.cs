@@ -257,7 +257,7 @@ namespace DesktopApplication
             f.ShowDialog();
         }
 
-        private void brn_canceladas_Click(object sender, EventArgs e)
+        private void brn_cancelled_Click(object sender, EventArgs e)
         {
             try
             {
@@ -265,7 +265,7 @@ namespace DesktopApplication
                 string sql = "select DISTINCT a.TIPO, a.NUMERO_DA_NOTA, a.SERIE, a.ENTRADA_SAIDA, a.NATUREZA_OPERACAO, a.CHAVE_ACESSO, a.RAZAO_SOCIAL, a.STATUS_NFE, a.DTA_EMISSAO, a.ULTIMA_ITERACAO from db_sis.tb_conf_ndd a inner join db_sis.tb_conf_c5 b on a.CHAVE_ACESSO = b.CHAVE_ACESSO where a.STATUS_NFE like '%Cancelado%' and a.COD_CLIENTE = @COD_CLI AND a.COD_EMPRESA = @COD_EMP AND a.MES = @MES AND a.ANO = @ANO order by a.NUMERO_DA_NOTA";
                 string msg = "Não foram encontradas notas canceladas na base consinco.";
                 string title = "Notas Canceladas";
-                Frm_Canceladas form = new Frm_Canceladas();
+                Frm_Audit_Cancelled form = new Frm_Audit_Cancelled();
                 Check_OpenForm(sql, form, msg, title);                   
             }
             catch (Exception ex)
@@ -283,7 +283,7 @@ namespace DesktopApplication
 
         }
 
-        private void btn_nao_relacionadas_Click(object sender, EventArgs e)
+        private void btn_unrelated_Click(object sender, EventArgs e)
         {
             try
             {
@@ -291,7 +291,7 @@ namespace DesktopApplication
                 string sql = "select DISTINCT ESPECIE as `Tipo`, NRO_DOCUMENTO as `Número NF`, SERIE as `Serie`, CHAVE_ACESSO `Chave de Acesso`, RAZAO_SOCIAL as `Razão Social` from db_sis.tb_conf_c5 where COD_CLIENTE = @COD_CLI AND COD_EMPRESA = @COD_EMP AND MES = @MES AND ANO = @ANO AND CHAVE_ACESSO not in (select CHAVE_ACESSO from db_sis.tb_conf_ndd where COD_CLIENTE = @COD_CLI AND COD_EMPRESA = @COD_EMP AND MES = @MES AND ANO = @ANO)";
                 string msg = "Não foram encontradas notas não relacionadas.";
                 string title = "Notas Não Relacionadas.";
-                Frm_Nao_Relacionadas Form = new Frm_Nao_Relacionadas();
+                Frm_Audit_Unrelated Form = new Frm_Audit_Unrelated();
                 Check_OpenForm(sql, Form, msg, title);             
             }
             catch (Exception ex)
@@ -304,7 +304,7 @@ namespace DesktopApplication
             }
         }
 
-        private void btn_analises_Click(object sender, EventArgs e)
+        private void btn_analyses_Click(object sender, EventArgs e)
         {
             try
             {
@@ -312,7 +312,7 @@ namespace DesktopApplication
                 string sql = "select * from (select CFOP, round(sum(VALOR_CONTABIL), 2) as `Valor Contábil`, round(sum(BASE_ICMS), 2) as `Base ICMS`, round(sum(VALOR_ISENTOS_ICMS), 2) as `Isentos ICMS`, round(sum(VALOR_OUTRAS_ICMS), 2) as `Outras ICMS`, round(sum(VALOR_ICMS_ST), 2) as `Valor ICMS / ST`, round(sum(VALOR_IPI), 2) as `Valor IPI`, round((round(sum(VALOR_CONTABIL), 2) - round(sum(BASE_ICMS), 2) - round(sum(VALOR_ISENTOS_ICMS), 2) - round(sum(VALOR_OUTRAS_ICMS), 2) - round(sum(VALOR_ICMS_ST), 2) - round(sum(VALOR_IPI), 2)), 2) as `Diferença` from db_sis.tb_conf_c5 where COD_CLIENTE = @COD_CLI AND COD_EMPRESA = @COD_EMP AND MES = @MES AND ANO = @ANO group by CFOP order by CFOP) A where Diferença <> 0";
                 string msg = "Não foram encontradas notas com divergência para análise.";
                 string title = "Notas Divergentes";
-                Frm_Analises form = new Frm_Analises();
+                Frm_Analyses form = new Frm_Analyses();
                 Check_OpenForm(sql, form, msg, title);
             }
             catch (Exception ex)
