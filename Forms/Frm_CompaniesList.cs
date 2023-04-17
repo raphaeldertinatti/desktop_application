@@ -111,14 +111,9 @@ namespace DesktopApplication
 
         private void Frm_CompaniesList_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Frm_Companies.instance != null)
-            {
-                Frm_Companies.instance.Captura();
-            }
-            if (Frm_TaxAudit.instance != null)
-            {
-                Frm_TaxAudit.instance.CapturaEmp();
-            }    
+            
+            Frm_Companies.instance.Captura();
+                         
         }
 
         private void lsv_companies_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -127,14 +122,9 @@ namespace DesktopApplication
 
             foreach (ListViewItem item in itens_selecionados)
             {
-                if (Frm_Companies.instance != null)
-                {
-                    Frm_Companies.instance.cod.Text = item.SubItems[0].Text;
-                }
-                if (Frm_TaxAudit.instance !=null)
-                {
-                    Frm_TaxAudit.instance.cod_emp.Text = item.SubItems[0].Text;
-                }
+                
+                Frm_Companies.instance.cod.Text = item.SubItems[0].Text;
+                               
             }
         }
     }
