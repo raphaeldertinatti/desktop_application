@@ -345,7 +345,7 @@ namespace DesktopApplication
                 connection.CloseConnection();
             }
         }        
-        private void button1_Click(object sender, EventArgs e)
+        private void button1__CFOPClick(object sender, EventArgs e)
         {
             try
             {
@@ -392,7 +392,7 @@ namespace DesktopApplication
             f.ShowDialog();
         }
 
-        private void btn_salvar_Click(object sender, EventArgs e)
+        private void btn_save_Click(object sender, EventArgs e)
         {
             try
             {

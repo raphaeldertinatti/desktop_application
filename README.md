@@ -399,17 +399,10 @@ This form is the general tax conference panel. By selecting the client, company,
 - **btn_unrelated_Click**: This button opens the `Frm_Audit_Unrelated` form, which returns all invoices that exist in the system but for some reason are not present in the IRS database.
 - **btn_analyses_Click**: This button opens the `Frm_Analyses` form that returns differences in accounting values grouped by CFOP (Fiscal Operation Code).
 - **btn_nat_operacao_Click**: This button opens the `Frm_Natureza_Operacao` form that compares the Fiscal Operation Codes (CFOP) and the Operation Nature of the invoice to verify if they are compatible.
-
-
-
-
-
-
-
-
-
-
-
+- **button1__CFOPClick**: This button opens the `Frm_CFOP_CST` form that compares the Fiscal Operation Codes (CFOP) and the CST code (tax situation code) to verify if they are compatible.
+- **btn_prod_rural_Click**: This button opens the `Frm_Prod_Rural` form that performs a conference between the CGO (General Operation Code) in the system and the rural producer invoices to verify if they are compatible.
+- **btn_transf_Click**: This button opens the `Frm_Transferencia` form that displays all transfer invoices issued during the period.
+- **btn_save_Click**: This button is used to save the observation/annotation for that conference. If the field is empty, the `InsertObs()` method will be called, which will insert the observation into the database table. If there is already an observation and the save button is pressed, the `UpdateObs()` method will be called, which will update the field in the table.
 
 
 
