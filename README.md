@@ -383,4 +383,4 @@ This form is opened when the user clicks on the `btn_associa_Click` button of th
 
 ## 9. Frm_TaxAudit
 
-![image]()
+![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_TaxAudit.png)
