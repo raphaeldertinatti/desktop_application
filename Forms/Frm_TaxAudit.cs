@@ -175,15 +175,15 @@ namespace DesktopApplication
 
         }
 
-        private void btn_consinco_Click(object sender, EventArgs e)
+        private void btn_system_Click(object sender, EventArgs e)
         {
-            Frm_Conf_Consinco f = new Frm_Conf_Consinco();
+            Frm_Audit_System f = new Frm_Audit_System();
             f.ShowDialog();
         }
 
-        private void btn_NDD_Click(object sender, EventArgs e)
+        private void btn_IRS_Click(object sender, EventArgs e)
         {
-            Frm_Conf_NDD f = new Frm_Conf_NDD();
+            Frm_Audit_IRS f = new Frm_Audit_IRS();
             f.ShowDialog();
         }
         private void CheckRowsC5()
@@ -245,15 +245,15 @@ namespace DesktopApplication
             
         }
 
-        private void btn_basefornec_Click(object sender, EventArgs e)
+        private void btn_basesupplier_Click(object sender, EventArgs e)
         {
-            Frm_Conf_Fornec f = new Frm_Conf_Fornec();
+            Frm_Audit_Supplier f = new Frm_Audit_Supplier();
             f.ShowDialog();
         }
 
         private void btn_valores_Click(object sender, EventArgs e)
         {
-            Frm_Conf_Valores f = new Frm_Conf_Valores();
+            Frm_Audit_Values f = new Frm_Audit_Values();
             f.ShowDialog();
         }
 
