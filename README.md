@@ -421,3 +421,9 @@ You will see that as we select the necessary data to perform the conference, the
 Obs: IRS Internal Revenue Service is equivalent to Receita Federal ou SEFAZ. (Brazil)
 
 [code: Frm_TaxAudit.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_TaxAudit.cs)
+
+## 9.1 Methods for importing .csv files.
+
+
+
+
