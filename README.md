@@ -443,3 +443,20 @@ This method receives an array of strings for the columns (headers) of the .csv f
 
 The logic of the method is basically to iterate through the "columns" string array and add each element as a new instance of "Index" in a list of column indexes containing the number of each index depending the column name. The "Indexes" object is created and initialized with this list of column indexes.
 
+> ###  public static List<csl_csv_sys> BuildConfC5(StreamReader reader, Indexes ind)
+
+The method BuildConfC5 receives two parameters: a StreamReader and the Indexes objects. The method returns a List of objects of type csl_csv_sys.
+
+The method read the contents of a text/csv file using the StreamReader object passed as a parameter.
+
+The Indexes object passed as a parameter is used to determine the index of the column that contains each value in the file. The Indexes object contains a list of IndexColumn objects, where each object represents a column in the file and its corresponding index.
+
+Once the file is read, the method uses the Indexes object to extract the values for each property of a csl_csv_sys object. A new instance of csl_csv_sys is created for each line in the file, and its properties are set based on the values extracted from the file using the Indexes object.
+
+Finally, each instance of csl_csv_sys is added to a List of csl_csv_sys objects, which is returned as the result of the method.
+
+In summary, the BuildConfC5 method is used to read a text/csv file, extract the data from the file using an Indexes object, and create a list of csl_csv_sys objects that represent the configuration data for each supplier. To conclude, this list will be used in the respective form to import the data into a table in MySQL.
+
+
+
+
