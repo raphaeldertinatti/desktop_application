@@ -464,4 +464,9 @@ In summary, the BuildConfC5 method is used to read a text/csv file, extract the 
 These forms are used to import the system's .csv files, IRS files, and supplier files, respectively. A label displays the date of the last file import. The DataGridView includes filters using the AGV (Advanced GridView) package. The forms are almost identical, with the same methods and buttons, except for the IRS form, which has separate imports for entries and exits.
 
 > ### Buttons
+- **btn_importar_Click:** This button opens the file selection window and reads the selected file using a StreamReader. Then, the `SetColumnsIndex()` and `BuildConfC5()` methods from the class corresponding to the import of a specific .csv file are called. After these methods organize the indices and return the list of columns with their respective values, a foreach loop is used to import the items in this list into a table in the database. Finally, a messagebox is displayed to indicate the success of the import.
+- **btn_limpar_Click**: Clears the filters and resets the data of the DataGridViews.
+
+
+
 > ### Methods
