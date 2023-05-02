@@ -457,9 +457,11 @@ Finally, each instance of cls_csv_sys is added to a List of cls_csv_sys objects,
 
 In summary, the BuildConfC5 method is used to read a text/csv file, extract the data from the file using an Indexes object, and create a list of cls_csv_sys objects, this list will be used in the respective form to import the data into a table in MySQL.
 
-## 9.2 Frm_Audit_System.
+## 9.2 Frm_Audit_System, Frm_Audit_IRS, Frm_Audit_Supplier.
 
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Audit_System.png)
+
+These forms are used to import the system's .csv files, IRS files, and supplier files, respectively. A label displays the date of the last file import. The DataGridView includes filters using the AGV (Advanced GridView) package. The forms are almost identical, with the same methods and buttons, except for the IRS form, which has separate imports for entries and exits.
 
 > ### Buttons
 > ### Methods

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace SistemaEtccom.Classes
+namespace DesktopApplication
 {
     class cls_csv_ndd    
     {

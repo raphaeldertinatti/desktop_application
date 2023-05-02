@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace SistemaEtccom.Classes
+namespace DesktopApplication
 {
     class cls_csv_fornec
     {

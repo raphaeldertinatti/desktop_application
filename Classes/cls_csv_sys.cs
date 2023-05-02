@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 using System.IO;
 using System.Globalization;
 
-namespace SistemaEtccom.Classes
+namespace DesktopApplication
 {
     public class cls_csv_c5   
     {
