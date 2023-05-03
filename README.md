@@ -486,5 +486,5 @@ There is also a checkbox where the user can mark the files that have already bee
 
 By double-clicking on any row, another form is opened with detailed data of the document for a more thorough review.
 
-[code: Frm_Audit_Values.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Values.cs) /n
-[code: sp_Conf_Values.sql](https://github.com/raphaeldertinatti/desktop_application/blob/main/SQL/sp_Conf_Values.sql)
+Form:[code: Frm_Audit_Values.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Values.cs)
+Sql Procedure: [code: sp_Conf_Values.sql](https://github.com/raphaeldertinatti/desktop_application/blob/main/SQL/sp_Conf_Values.sql)
