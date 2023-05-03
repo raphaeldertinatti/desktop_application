@@ -128,6 +128,7 @@ The main form MDI contains a toolstrip menu, being the parent form that contains
     - Frm_Audit_IRS.
     - Frm_Audit_Supplier.
     - Frm_Audit_Values.
+        - Frm_Audit_Values_Detailed.
     - Frm_Audit_Cancelled.
     - Frm_Audit_Unrelated.
     - Frm_Analyses.
