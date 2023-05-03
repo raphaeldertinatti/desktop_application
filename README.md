@@ -477,3 +477,11 @@ These forms are used to import the system's .csv files, IRS files, and supplier 
 ## 9.3 Frm_Audit_Values.
 
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Audit_Values.png)
+
+This form displays a general panel with all invoices issued by the client that have some tax discrepancies between what was issued by the system and what was sent to the IRS.
+
+The Datagridview is paginated to make navigation between data lighter, considering that there are various color formats that interfere a little with performance, pagination was something that came as a solution for that.
+
+There is also a checkbox where the user can mark the files that have already been checked.
+
+By double-clicking on any row, another form is opened with detailed data of the document for a more thorough review.
