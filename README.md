@@ -473,3 +473,7 @@ These forms are used to import the system's .csv files, IRS files, and supplier 
 - **Frm_Audit_System_Load:** Invokes the `BindData()` method when the form is loaded.
 - **BindData():** It selects the imported data, populates the DataGridView and calls the `CaptureUltImport()` method.
 - **CaptureUltImport():** Sets the label with the date of the last import from the file.
+
+## 9.3 Frm_Audit_Values.
+
+![image]()
