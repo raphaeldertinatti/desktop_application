@@ -485,3 +485,6 @@ The Datagridview is paginated to make navigation between data lighter, consideri
 There is also a checkbox where the user can mark the files that have already been checked.
 
 By double-clicking on any row, another form is opened with detailed data of the document for a more thorough review.
+
+[code: Frm_Audit_Values.cs]()
+[code: sp_Conf_Values.sql]()
