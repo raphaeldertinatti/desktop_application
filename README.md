@@ -486,6 +486,22 @@ There is also a checkbox where the user can mark the files that have already bee
 
 By double-clicking on any row, another form is opened with detailed data of the document for a more thorough review.
 
+> ### Buttons
+
+In this form, there are only 2 buttons, **btn_Next_Click** and **btn_previous_Click**, which serve to navigate between the pages of the datagridview. The control is done by the global variables **offset**, **totPG**, and **inPG**, where offset is the variable that adds or subtracts by 26, which is the number of rows in the gridview, as the buttons are triggered. It is also an input parameter of the procedure that fills the gridview. The variable totPG receives the total number of pages from the method countRows(), and the variable inPG controls the initial page and the page number the user is currently on.
+
+> ### Methods
+
+**BindData():**
+**countRows():**
+**Frm_Conf_Values_Load():**
+**dgv_conf_values_CellFormatting():**
+**dgv_conf_values_CellDoubleClick():**
+**dgv_conf_values_CellValueChanged():**
+**CapturaFleg():**
+
+
+
 - Form: [code: Frm_Audit_Values.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Values.cs)
 - Sql Procedure: [code: sp_Conf_Values.sql](https://github.com/raphaeldertinatti/desktop_application/blob/main/SQL/sp_Conf_Values.sql)
 
