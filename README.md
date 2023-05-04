@@ -505,4 +505,5 @@ In this form, there are only 2 buttons, **btn_Next_Click** and **btn_previous_Cl
 
 ## 9.4 Frm_Audit_Values_Detailed.
 
-![image]()
+![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Audit_Values_Detailed.png)
+
