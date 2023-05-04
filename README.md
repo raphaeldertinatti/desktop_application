@@ -511,3 +511,9 @@ The detailed review opens a panel with four Groupboxes. The first one contains t
 
 > ### Methods.
 
+- **BindData():** This method searches the database for the items of a specific invoice using a query and returns the data in a datagridview. After populating the gridview, the methods `Capture()` and `CaptureNatureza()` are called.
+- **Capture():** This is the method that will retrieve the general data of the invoice and fill in the textboxes.
+- **PrintText():** This method changes the colors of the fiscal value textboxes, making them red when they are different and green when they are equal.
+- **CaptureNatureza():** Custom method to return only the "Nature of the Operation" field, which is a tax attribute, and fill it in the textbox.
+
+[code: Frm_Audit_Values_Detailed.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Values_Detailed.cs)
