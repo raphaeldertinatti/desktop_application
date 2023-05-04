@@ -492,15 +492,13 @@ In this form, there are only 2 buttons, **btn_Next_Click** and **btn_previous_Cl
 
 > ### Methods
 
-**BindData():**
-**countRows():**
-**Frm_Conf_Values_Load():**
-**dgv_conf_values_CellFormatting():**
-**dgv_conf_values_CellDoubleClick():**
-**dgv_conf_values_CellValueChanged():**
-**CapturaFleg():**
-
-
+- **BindData():** This method is responsible for calling the SQL procedure that performs the necessary field comparisons to return the discrepancies. This query with the tax discrepancies is then populated into the datagridview. The default colors of the columns are also defined in this method. Finally, a new checkbox column is created which serves as a control for what has already been reviewed.
+- **countRows():** This method calls another SQL procedure without the LIMIT clause that limits the query results to always 26 rows. By doing so, it returns the total number of rows and divides it by 26, giving us the total number of pages, which is then stored in the global variable totPG.
+- **Frm_Conf_Values_Load():** When the form is loaded, the method `BindData()` is called with the parameter offset 0, meaning that it will return the first 26 rows, populating the datagridview. The method `countRows()` is also called to capture the total number of pages in the datagridview. The method `CapturaFleg()` is called to return which files in the datagridview have already been reviewed, filling the checkbox and painting the row green. Finally, the label containing the current page/total pages is populated.
+- **dgv_conf_values_CellFormatting():** This method compares certain columns of the datagridview that represent tax values. When it finds a difference, the font color is changed to red. If the values are the same, the font color remains black.
+- **dgv_conf_values_CellDoubleClick():** When a row in the datagridview is double-clicked, the form Frm_Audit_Values_Detailed is opened and receives the values of that specific row in the gridview in its textboxes.
+**dgv_conf_values_CellValueChanged():** This method is triggered when the checkbox in the gridview is clicked, indicating that the corresponding row or invoice has been reviewed. This causes the row to turn green, and this information is automatically inserted into a table in the database. When the gridview is repopulated, we already know which invoices have been reviewed, so these are marked with a checked checkbox and a green row.
+**CapturaFleg():** This is the method that performs the above-mentioned operation of checking which invoices have already been reviewed, marking the checkbox and painting the row green.
 
 - Form: [code: Frm_Audit_Values.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Values.cs)
 - Sql Procedure: [code: sp_Conf_Values.sql](https://github.com/raphaeldertinatti/desktop_application/blob/main/SQL/sp_Conf_Values.sql)
