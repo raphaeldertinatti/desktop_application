@@ -507,3 +507,7 @@ In this form, there are only 2 buttons, **btn_Next_Click** and **btn_previous_Cl
 
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Audit_Values_Detailed.png)
 
+The detailed review opens a panel with four Groupboxes. The first one contains the main data of the invoice, the second one contains the fiscal values from the system, the third one contains the fiscal values from the IRS, and the last one contains the datagridview that returns the items or products of that invoice, containing their respective tax data. With this panel, it is possible to check field by field which are the discrepancies. The textboxes containing the values turn red when they point out a divergence and green when they are in agreement. The document items also provide relevant tax information for identifying the source of the discrepancy.
+
+> ### Methods.
+
