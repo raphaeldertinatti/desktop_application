@@ -503,3 +503,6 @@ In this form, there are only 2 buttons, **btn_Next_Click** and **btn_previous_Cl
 - Form: [code: Frm_Audit_Values.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Values.cs)
 - Sql Procedure: [code: sp_Conf_Values.sql](https://github.com/raphaeldertinatti/desktop_application/blob/main/SQL/sp_Conf_Values.sql)
 
+## 9.4 Frm_Audit_Values_Detailed.
+
+![image]()
