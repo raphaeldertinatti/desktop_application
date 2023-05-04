@@ -29,8 +29,7 @@ namespace DesktopApplication
 
         public void ConstructListView(ListView listview, string[] headers, int[] widths)
         {
-            listview.View = View.Details;
-            listview.LabelEdit = true;
+            listview.View = View.Details;            
             listview.AllowColumnReorder = true;
             listview.FullRowSelect = true;
             listview.GridLines = true;
