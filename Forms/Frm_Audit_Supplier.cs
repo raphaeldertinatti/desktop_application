@@ -41,7 +41,12 @@ namespace SistemaEtccom
                     cls_csv_fornec.Indexes index = cls_csv_fornec.SetColumnsIndex(columns);
                     var consinco = cls_csv_fornec.BuildConfC5(reader, index);
                     Delete();
-                    connection.OpenConnection();                    
+                    connection.OpenConnection(); 
+                    Frm_ProgressBar f = new Frm_ProgressBar();
+                    f.Show();
+                    f.totalLines = File.ReadAllLines(nomearquivo).Length;
+                    f.progressBar1.Maximum = f.totalLines;
+                    int currentLine = 0;                   
 
                     foreach (var item in consinco)
                     {
@@ -58,9 +63,12 @@ namespace SistemaEtccom
                         MySqlCommand cmd = connection.CreateCommand(sql,parameters);
                         MySqlDataReader read = cmd.ExecuteReader();
                         read.Close();
+                         currentLine++;
+                        f.progressBar1.Value = currentLine;
+                        f.progressBar1.Refresh();
                         Cursor.Current = Cursors.WaitCursor;
                     }
-
+                    f.Close();
                     connection.CloseConnection();
                     BindData();
                     Frm_TaxAudit.instance.import_fornec.Text = "Importado";

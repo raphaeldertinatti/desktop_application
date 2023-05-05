@@ -44,6 +44,11 @@ namespace DesktopApplication
                     var consinco = cls_csv_c5.BuildConfC5(reader, index);                    
                     Delete();
                     connection.OpenConnection();
+                    Frm_ProgressBar f = new Frm_ProgressBar();
+                    f.Show();
+                    f.totalLines = File.ReadAllLines(nomearquivo).Length;
+                    f.progressBar1.Maximum = f.totalLines;
+                    int currentLine = 0;    
 
                     foreach (var item in consinco)
                     {
@@ -60,9 +65,12 @@ namespace DesktopApplication
                         MySqlCommand cmd = connection.CreateCommand(sql, parameters);
                         MySqlDataReader read = cmd.ExecuteReader();
                         read.Close();
+                         currentLine++;
+                        f.progressBar1.Value = currentLine;
+                        f.progressBar1.Refresh();
                         Cursor.Current = Cursors.WaitCursor;
                     }
-
+                    f.Close();
                     connection.CloseConnection();
                     BindData();
                     Frm_TaxAudit.instance.import_c5.Text = "Importado";
