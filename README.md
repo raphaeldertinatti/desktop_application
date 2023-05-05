@@ -135,6 +135,7 @@ The main form MDI contains a toolstrip menu, being the parent form that contains
     - Frm_Natureza_Operacao.
         - Frm_Natureza_Operacao_Detailed.
     - Frm_CFOP_CST.
+        - Frm_CFOP_CST_Detailed.
     - Frm_Rural_Producer.
     - Frm_Transferences.
 - Frm_Search_Doc.
