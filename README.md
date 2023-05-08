@@ -525,7 +525,8 @@ The detailed review opens a panel with four Groupboxes. The first one contains t
 
 > ### Methods.
 
-[code: Frm_Audit_Cancelled.cs]()
+- Cancelled: [code: Frm_Audit_Cancelled.cs]()
+- Unrelated: [code: Frm_Audit_Unrelated.cs]()
 ## 9.4 Frm_Analyses.
 
 > ### Methods.
@@ -536,6 +537,7 @@ The detailed review opens a panel with four Groupboxes. The first one contains t
 > ### Buttons.
 > ### Methods.
 
+[code: Frm_Natureza_Operacao.cs]()
 ## 9.5.1 Frm_Natureza_Operacao_Detailed.
 
 > ### Methods.
