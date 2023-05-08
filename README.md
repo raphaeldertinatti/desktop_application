@@ -555,18 +555,19 @@ Os três formulários (Natureza_Operacao, CFOP_CST e Rural_Producer) e seus resp
 
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Natureza_Operacao.png)
 
-Neste caso no listview à direita temos uma lista de CFOPs referente as notas fiscais emitidas naquele período para aquela empresa, e ao lado direito, no datagridview, temos todas as descrições de Natureza da Receita referentes às notas fiscais emitidas com o CFOP selecionado no listview. Essa conferência serve para verificar se as naturezas informadas corresponde ao cfop, se tiver alguma incorreta a linha será pintada de vermelho.
+In this case, on the right-hand side listview, we have a list of CFOPs related to the invoices issued during that period for that company, and on the right-hand side datagridview, we have all the descriptions of the Revenue Nature related to the invoices issued with the selected CFOP in the listview. This check is carried out to verify if the reported revenue nature corresponds to the CFOP, if there is any incorrect one, the line will be highlighted in red.
 
-O formulário de CFOP_CST segue a mesma lógica, porém à direita temos os CFOPs e à esquerda temos os CSTs, como cada CFOP na nota fiscal existem os possívels CSTs corretos, caso alguma nota fiscal seja emitida com algum CFOP e tenha algum item com CST incompatível, também ficará marcado de vermelho.
+The CFOP_CST form follows the same logic, but on the right-hand side, we have the CFOPs, and on the left-hand side, we have the CSTs. As each CFOP in the invoice has its correct possible CSTs, if any invoice is issued with any CFOP and has an item with an incompatible CST, it will also be marked in red.
 
-Por último, no formulário de produtor rural, é conferido se o CGO (à direita) está correto para a emissão de notas fiscais que foram recebidas de produtor rural.
+Finally, in the rural producer form, it is checked whether the CGO (on the right-hand side) is correct for the issuance of invoices received from rural producers.
 
-Para os três casos existe um subformulário que é aberto ao clicar em alguma linha do datagridview, este formulário detalhado mostra mais informações sobre as notas e itens referentes aquela divergência, conforme exemplo:
+For all three cases, there is a subform that is opened when clicking on a row of the datagridview. This detailed form shows more information about the invoices and items related to that discrepancy, as shown in the example:
 
-![image]()
+![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Natureza_Operacao_Detailed.png)
 
-> ### Buttons.
 > ### Methods.
+
+Among the methods used, the only one worth describing here, which is different from the others presented, is **dgv_Natureza_CellFormatting()**. This method changes the color of the row if the data in the row does not correspond to correct data. The test is done as follows: lists of strings with sets of data are created, and the program checks if the selected row is within any list. If it is, it will verify the criteria of what is not allowed to exist within that list. If it finds any, the cell is formatted to red.
 
 - Natureza Operação [code: Frm_Natureza_Operacao.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Natureza_Operacao.cs)
 - Natureza Operação Detailed [code: Frm_Natureza_Operacao_Detailed.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Natureza_Operacao_Detailed.cs)
