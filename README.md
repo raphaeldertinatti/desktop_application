@@ -538,11 +538,17 @@ Both forms have only the **BindData()** method, which searches the database tabl
 
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Analyses.png)
 
-a
+This form has a ListView at the top that returns discrepancies in the accounting value grouped by CFOP. If the values do not match, they will appear in this ListView. By clicking on the ListView row that points to the discrepancy, the DataGridView will show the invoices related to that difference. After checking the invoices, you can click on the checkbox to mark them as verified.
 
 > ### Methods.
 
+- **ListarDivCFOP():** Method called on the form initialization to populate the ListView with the query result bringing the discrepancies of accounting value grouped by CFOP.
+- **ListaDivRazaoFiltro():** Method called on the ListView's _ItemSelectionChanged event to populate the DataGridView with the query result, bringing the invoices that have discrepancies in accounting values for verification.
+- **dgv_ap_detalhado_CellValueChanged():** This method checks if the checkbox has been clicked. If it has, this information will be included in a table in the database with the information that the invoice has been verified.
+- **CapturaFleg():** Method also called on the ListView's _ItemSelectionChanged event, it searches the database table to see if that invoice has already been checked. If yes, the formatting of the row is done by painting it green and selecting the checkbox.
+
 [code: Frm_Analyses.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Analyses.cs)
+
 ## 9.5 Frm_Natureza_Operacao.
 
 > ### Buttons.
