@@ -536,7 +536,9 @@ Both forms have only the **BindData()** method, which searches the database tabl
 
 ## 9.4 Frm_Analyses.
 
-![image]()
+![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Analyses.png)
+
+a
 
 > ### Methods.
 
