@@ -551,6 +551,10 @@ This form has a ListView at the top that returns discrepancies in the accounting
 
 ## 9.5 Frm_Natureza_Operacao, Frm_Natureza_Operacao_Detailed, Frm_CFOP_CST, Frm_CFOP_CST_Detailed, Frm_Rural_Producer, Frm_Rural_Producer_Detailed.
 
+Os três formulários (Natureza_Operacao, CFOP_CST e Rural_Producer) e seus respectivos subformulários detalhados possuem a mesma estrutura, um Listview à esquerda, e um datagridview à direita conforme imagem:
+
+![image]()
+
 > ### Buttons.
 > ### Methods.
 
