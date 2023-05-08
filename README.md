@@ -523,10 +523,17 @@ The detailed review opens a panel with four Groupboxes. The first one contains t
 
 ## 9.3 Frm_Audit_Cancelled, Frm_Audit_Unrelated.
 
+Both forms have only one DataGridView that returns a list of invoices.
+- Frm_Audit_Cancelled: canceled invoices in the IRS that still appear in the system.
+- Frm_Audit_Unrelated: invoices that exist in the system but do not exist in the IRS.
+
 > ### Methods.
+
+Both forms have only the **BindData()** method, which searches the database tables using specific queries for data and populates the DataGridView.
 
 - Cancelled: [code: Frm_Audit_Cancelled.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Cancelled.cs)
 - Unrelated: [code: Frm_Audit_Unrelated.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Unrelated.cs)
+
 ## 9.4 Frm_Analyses.
 
 > ### Methods.
