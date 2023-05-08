@@ -577,3 +577,7 @@ Among the methods used, the only one worth describing here, which is different f
 - Rural Producer Detailed [code: Frm_Rural_Producer_Detailed.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Rural_Producer_Detailed.cs)
 
 ## 9.8 Frm_Transferences.
+
+The Frm_Transferences form consists of a textbox where one or more "Person" codes can be entered, which can be either the client itself or its suppliers, so that the CFOPs of the notes issued by that "Person" are returned below in a datagridview. Since branches cannot issue sales notes to each other, only transfer notes, the CFOPs of the notes issued by the company's own branches are verified.
+
+[code: Frm_Transferences]()
