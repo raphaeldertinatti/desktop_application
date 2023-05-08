@@ -525,49 +525,49 @@ The detailed review opens a panel with four Groupboxes. The first one contains t
 
 > ### Methods.
 
-- Cancelled: [code: Frm_Audit_Cancelled.cs]()
-- Unrelated: [code: Frm_Audit_Unrelated.cs]()
+- Cancelled: [code: Frm_Audit_Cancelled.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Cancelled.cs)
+- Unrelated: [code: Frm_Audit_Unrelated.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Audit_Unrelated.cs)
 ## 9.4 Frm_Analyses.
 
 > ### Methods.
 
-[code: Frm_Analyses.cs]()
+[code: Frm_Analyses.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Analyses.cs)
 ## 9.5 Frm_Natureza_Operacao.
 
 > ### Buttons.
 > ### Methods.
 
-[code: Frm_Natureza_Operacao.cs]()
+[code: Frm_Natureza_Operacao.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Natureza_Operacao.cs)
 ## 9.5.1 Frm_Natureza_Operacao_Detailed.
 
 > ### Methods.
 
-[code: Frm_Natureza_Operacao_Detailed.cs]()
+[code: Frm_Natureza_Operacao_Detailed.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Natureza_Operacao_Detailed.cs)
 
 ## 9.6 Frm_CFOP_CST.
 
 > ### Buttons.
 > ### Methods.
 
-[code: Frm_CFOP_CST.cs]()
+[code: Frm_CFOP_CST.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CFOP_CST.cs)
 
 ## 9.6.1 Frm_CFOP_CST_Detailed.
 
 > ### Methods.
 
-[code: Frm_CFOP_CST_Detailed.cs]()
+[code: Frm_CFOP_CST_Detailed.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_CFOP_CST_Detailed.cs)
 
 ## 9.7 Frm_Rural_Producer.
 
 > ### Buttons.
 > ### Methods.
 
-[code: Frm_Rural_Producer.cs]()
+[code: Frm_Rural_Producer.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Rural_Producer.cs)
 
 ## 9.7.1 Frm_Rural_Producer_Detailed.
 
 > ### Methods.
 
-[code: Frm_Rural_Producer_Detailed.cs]()
+[code: Frm_Rural_Producer_Detailed.cs](https://github.com/raphaeldertinatti/desktop_application/blob/main/Forms/Frm_Rural_Producer_Detailed.cs)
 
 ## 9.8 Frm_Transferences.
