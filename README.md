@@ -553,6 +553,16 @@ This form has a ListView at the top that returns discrepancies in the accounting
 
 Os três formulários (Natureza_Operacao, CFOP_CST e Rural_Producer) e seus respectivos subformulários detalhados possuem a mesma estrutura, um Listview à esquerda, e um datagridview à direita conforme imagem:
 
+![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Natureza_Operacao.png)
+
+Neste caso no listview à direita temos uma lista de CFOPs referente as notas fiscais emitidas naquele período para aquela empresa, e ao lado direito, no datagridview, temos todas as descrições de Natureza da Receita referentes às notas fiscais emitidas com o CFOP selecionado no listview. Essa conferência serve para verificar se as naturezas informadas corresponde ao cfop, se tiver alguma incorreta a linha será pintada de vermelho.
+
+O formulário de CFOP_CST segue a mesma lógica, porém à direita temos os CFOPs e à esquerda temos os CSTs, como cada CFOP na nota fiscal existem os possívels CSTs corretos, caso alguma nota fiscal seja emitida com algum CFOP e tenha algum item com CST incompatível, também ficará marcado de vermelho.
+
+Por último, no formulário de produtor rural, é conferido se o CGO (à direita) está correto para a emissão de notas fiscais que foram recebidas de produtor rural.
+
+Para os três casos existe um subformulário que é aberto ao clicar em alguma linha do datagridview, este formulário detalhado mostra mais informações sobre as notas e itens referentes aquela divergência, conforme exemplo:
+
 ![image]()
 
 > ### Buttons.
