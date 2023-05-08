@@ -555,7 +555,7 @@ The three forms (Natureza_Operacao, CFOP_CST, and Rural_Producer) and their resp
 
 ![image](https://github.com/raphaeldertinatti/desktop_application/blob/main/Images/Frm_Natureza_Operacao.png)
 
-In this case, on the right-hand side listview, we have a list of CFOPs related to the invoices issued during that period for that company, and on the right-hand side datagridview, we have all the descriptions of the Revenue Nature related to the invoices issued with the selected CFOP in the listview. This check is carried out to verify if the reported revenue nature corresponds to the CFOP, if there is any incorrect one, the line will be highlighted in red.
+In this case, on the left, we have a list of CFOPs related to the invoices issued during that period for that company, and on the right side, in the datagridview, we have all the descriptions of the Revenue Nature related to the invoices issued with the selected CFOP in the listview. This check is carried out to verify if the reported revenue nature corresponds to the CFOP, if there is any incorrect one, the line will be highlighted in red.
 
 The CFOP_CST form follows the same logic, but on the right-hand side, we have the CFOPs, and on the left-hand side, we have the CSTs. As each CFOP in the invoice has its correct possible CSTs, if any invoice is issued with any CFOP and has an item with an incompatible CST, it will also be marked in red.
 
